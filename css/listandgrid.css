@@ -1,0 +1,32 @@
+.mybtn{
+    border: none;
+}
+
+.Active
+,.Active:hover{
+    color: #F7941D;
+}
+
+.item_grid {
+    list-style: none;
+    --auto-grid-min-size: 13rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 0.6rem;
+    background: #fff;
+}
+.myItem{
+    border: 1px solid lightgray;
+}
+.myItem:hover{
+    background-color: lightgray;
+}
+.item-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+ 
