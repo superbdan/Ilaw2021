@@ -228,6 +228,23 @@
                         </a>
                     </li>
             <?php  } ?>
+
+            <!-- Settings Page -->
+            <?php 
+                    if($active == "Settings"){
+                    ?>
+                    <li class="parent">
+                        <a href="settings.php"  class="active"><i class="fa fa-cogs mr-3"> </i>
+                        <span class="none">Settings</span>
+                        </a>
+                        </li>
+                    <?php }else{ ?>
+                    <li class="parent">
+                        <a href="settings.php"><i class="fa fa-cogs mr-3"> </i>
+                        <span class="none">Settings</span>
+                        </a>
+                    </li>
+            <?php  } ?>
         </ul>
     </div>
 <!-- End of Sidebar Navigation Menu-->
