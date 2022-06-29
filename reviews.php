@@ -351,9 +351,9 @@ $(document).ready(function(){
 
                     for(var count = 0; count < data.review_data.length; count++)
                     {
-                        html += '<div class="row mb-3">';
+                        html += '<div class="d-flex mb-3">';
 
-                        html += '<div class="col-sm-1 "><div class="rounded bg-gray text-dark p-3 "><h3 class="text-center">'+data.review_data[count].user_name.charAt(0)+'</h3></div></div>';
+                        html += '<div class="rounded bg-white text-dark p-3 "><img src="admin/images/Profiles/Patrick.jpg" alt="Admin_Profile" width="70px" class="rounded-circle" /><h3 class="text-center">'+data.review_data[count].user_name.charAt(0)+'</h3></div>';
 
                         html += '<div class="col-sm-11">';
 

@@ -10,7 +10,7 @@ include('sidebar.php');
                 <ol class="breadcrumb">
                     <h5 class="pt-2" ><strong>Dashboard</strong></h5>
                     <ul class="nav ml-auto add_product">
-                        <li><a tabindex="0" class="btn btn-theme pb-1" role="button" data-toggle="popover" data-trigger="focus" title="Content Guide" data-content="The Dashboard serve as the summary review of the overall output of the table for easy monitoring."><i class="fa fa-info fa-lg"></i></a></li>
+                        <li><a tabindex="0" class="btn btn-primary pb-1" role="button" data-toggle="popover" data-trigger="focus" title="Content Guide" data-content="The Dashboard serve as the summary review of the overall output of the table for easy monitoring."><i class="fa fa-info fa-lg"></i></a></li>
                     </ul>
                 </ol>
             </nav>

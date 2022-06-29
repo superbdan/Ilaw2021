@@ -1121,7 +1121,7 @@ body {
     bottom: 60px;
     left: 0;
     display: block;
-    z-index: 3333;
+    z-index: 50;
     height: 12px;
 }
 .testim .dots .dot{
@@ -1178,6 +1178,12 @@ border-color: #F7941D;
     font-size: 1em;
     margin: 15px 0;
 }
+.testim .cont div h6{
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 15px 0;
+}
 .testim .cont div p{
     font-size: 1.15em;
     color: #eee;
@@ -1191,6 +1197,9 @@ border-color: #F7941D;
 .testim .cont div.active h2{
     animation: testim-content-in .4s ease-in-out forwards;
 }
+.testim .cont div.active h6{
+    animation: testim-content-in .5s ease-in-out forwards;
+}
 .testim .cont div.active p {
     animation: testim-content-in .5s ease-in-out forwards;
 }
@@ -1199,6 +1208,9 @@ border-color: #F7941D;
 }
 .testim .cont div.inactive h2{
     animation: testim-content-out .4s ease-in-out forwards;
+}
+.testim .cont div.inactive h6{
+    animation: testim-content-out .5s ease-in-out forwards;
 }
 .testim .cont div.inactive p {
     animation: testim-content-out .5s ease-in-out forwards;

@@ -32,7 +32,8 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    
+    <!--Ckeditor-->
+    <script src="assets/js/ckeditor5/build-classic/ckeditor.js"></script>
 </head>
 <body>
 
@@ -225,6 +226,22 @@
                     <li class="parent">
                         <a href="logs.php"><i class="fa fa-book mr-3"> </i>
                         <span class="none">Logs</span>
+                        </a>
+                    </li>
+            <?php  } ?>
+            <!-- Settings Page -->
+            <?php 
+                    if($active == "Settings"){
+                    ?>
+                    <li class="parent">
+                        <a href="settings.php"  class="active"><i class="fa fa-cogs mr-3"> </i>
+                        <span class="none">Settings</span>
+                        </a>
+                        </li>
+                    <?php }else{ ?>
+                    <li class="parent">
+                        <a href="settings.php"><i class="fa fa-cogs mr-3"> </i>
+                        <span class="none">Settings</span>
                         </a>
                     </li>
             <?php  } ?>

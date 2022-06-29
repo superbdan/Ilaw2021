@@ -8,44 +8,36 @@ include('sidebar.php');
 <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <h5 class="pt-2" ><strong>About Us</strong></h5>
+                    <h5 class="pt-2" ><strong>Customer Support</strong></h5>
                     <ul class="nav ml-auto add_product">
-                        <li><a type="button" id="add_button" name="modify" data-toggle="modal" data-target="#m_aboutusModal"  class="btn btn-info ml-3 p-1"><i class="fa fa-pencil"></i> Modify About Us</a></li>
+                        <li><a type="button" id="add_button" name="modify" data-toggle="modal" data-target="#m_customersuppModal"  class="btn btn-info ml-3 p-1"><i class="fa fa-pencil"></i> Modify Custpmer Support</a></li>
                     </ul>
                 </ol>
                 <ol class="breadcrumb breadcrumb-arrow">
                     <li class="breadcrumb-item" aria-current="page"><a href="settings.php">Settings</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a>Modify About Us</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a>Modify Customer Support</a></li>
         </ol>
             </nav>
             <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm">
-                <h1> About Us </h1>
-                <h6><b><?php echo $label1; ?></b></h6>
-                <p><?php echo $details1; ?></p>
-                <h6><b><?php echo $label2; ?></b></h6>
-                <p><?php echo $details2; ?></p> 
-                <h6><b><?php echo $label3; ?></b></h6>
-                <p><?php echo $details3; ?></p> 
-                <h6><b><?php echo $label4; ?></b></h6>
-                <p><?php echo $details4; ?></p> 
+                <h1> How To Buy </h1>
+                <p><?php echo $details_htb; ?></p>
+                
             </div>
 <!-- About Us -->
-    <div id="m_aboutusModal" class="modal fade">
+    <div id="m_customersuppModal" class="modal fade">
     	<div class="modal-dialog modal-lg modal-dialog-scrollable">
             <form action="" method="post" enctype="multipart/form-data">
     			<div class="modal-content">
 					<div class="modal-header">
-						<h3>Update About Us</h3>
+						<h3>Update Customer Support</h3>
     				</div>
     				<div class="modal-body">
-                    <!-- Our Brief History -->
+                    <!-- How To Buy -->
+                    <label for="floatingSelect1 mt-2">How to Buy:</label>
                     <div class="form-floating mt-2">
-                            <input type="text" class="form-control" id="floatingInput1" value="<?php echo $label1; ?>" name="label1" placeholder="Our Brief History" required> 
+                        <textarea class="form-control" name="details_htb" placeholder="Details" style="height: 150px; resize:none;" required><?php echo $details_htb; ?></textarea>
                     </div>
-                    <div class="form-floating mt-2">
-                        <textarea class="form-control" name="details1" placeholder="Details" id="floatingTextarea1" style="height: 150px; resize:none;" required><?php echo $details1; ?></textarea>
-                    </div>
-                    <!-- End of Our Brief History -->
+                    <!-- End of How To Buy -->
 
                     <!-- Our Culture -->
                     <div class="form-floating mt-2">

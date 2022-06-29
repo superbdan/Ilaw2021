@@ -82,11 +82,31 @@
             <h6>Manager</h6>
             <p> Our goal is to give every Filipino the lighting solutions which is high in quality, competitive price and offers strong after sales.</p>
         </div>
+        <div class = "box_team border shadow">
+            <img src="images/Others/Team.jpg" alt="CEO"><br>
+            <h4>Mr. Patrick Lingahan</h4>
+            <h6>Manager</h6>
+            <p> Our goal is to give every Filipino the lighting solutions which is high in quality, competitive price and offers strong after sales.</p>
+        </div>
+        <div class = "box_team border shadow">
+            <img src="images/Others/Team.jpg" alt="CEO"><br>
+            <h4>Mr. Patrick Lingahan</h4>
+            <h6>Manager</h6>
+            <p> Our goal is to give every Filipino the lighting solutions which is high in quality, competitive price and offers strong after sales.</p>
+        </div>
         </div>
     <section class="unknown_section">
         <div class = "line_partners">
           <h3>Partners</h3>
           <!-- Add Another Partner of ILAW, just copy the image code and edit the src & alt -->
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
+          <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
           <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
           <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">
           <img class="border shadow" src="images/Others/Zebedee.png" alt="Zebedee Logo">

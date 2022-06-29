@@ -383,18 +383,24 @@
                 <div class="active">
                     <div class="img"><img src="images/testimony/Ashley.jpg"></div>
                     <h2>Mary Ashley G. Faustino</h2>
-                    <p>"I want to commend the quality products and services of this company. The communication was fast and the website is so interactive."</p>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>"Commended Quality Products and Services"</h6>
+                    <p>I want to commend the quality products and services of this company. The communication was fast and the website is so interactive.</p>
                 </div>
                 
                 <div>
                     <div class="img"><img src="images/testimony/Patrick.jpg"></div>
                     <h2>Patrick M. Lingahan</h2>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>"Recommended Company"</h6>
                     <p>"Products and Service are highly recommended with their good qualities. Very accomodating and the website replies quickly. Thank you!"</p>
                 </div>
                 
                 <div>
                     <div class="img"><img src="images/testimony/Natasha.png"></div>
                     <h2>Natasha M. Lingahan</h2>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>"Satisfaction of the Customers"</h6>
                     <p>"For its price, you'll really get a quality item, the seller as well as the website are very accomodating, they reply to your messages and put an effort to explain and satisfy the customer's needs".</p>
                 </div>
             </div>

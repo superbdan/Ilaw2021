@@ -59,7 +59,7 @@ include('../function.php');
 					<!--/Datatable-->
             </div>
     <div id="itemsModal" class="modal fade">
-    	<div class="modal-dialog">
+    	<div class="modal-dialog modal-lg">
     		<form method="post" id="items_form">
     			<div class="modal-content">
     				<div class="modal-header">

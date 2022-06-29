@@ -119,7 +119,7 @@ include('../function.php');
                         <div class="col-md-8">
                         <div class="form-group">
                             <label><b>Enter Receiver Address:</b></label>
-                            <input name="order_address" style="resize:none;" id="order_address" class="form-control" placeholder="Enter Exact Address" height="10px" required></input>
+                            <textarea name="order_address" style="resize:none;" id="order_address" class="form-control" placeholder="Enter Exact Address" height="10px" required></textarea>
                         </div>
                         </div>
                         </div>

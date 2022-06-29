@@ -8,14 +8,14 @@ include('sidebar.php');
 <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <h5 class="pt-2" ><strong>About Us</strong></h5>
+                    <h5 class="pt-2" ><strong>Best Sellers Items</strong></h5>
                     <ul class="nav ml-auto add_product">
-                        <li><a type="button" id="add_button" name="modify" data-toggle="modal" data-target="#m_aboutusModal"  class="btn btn-info ml-3 p-1"><i class="fa fa-pencil"></i> Modify About Us</a></li>
+                        <li><a type="button" id="add_button" name="modify" data-toggle="modal" data-target="#m_aboutusModal"  class="btn btn-info ml-3 p-1"><i class="fa fa-pencil"></i> Modify Best Sellers Items</a></li>
                     </ul>
                 </ol>
                 <ol class="breadcrumb breadcrumb-arrow">
                     <li class="breadcrumb-item" aria-current="page"><a href="settings.php">Settings</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a>Modify About Us</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a>Modify Best Sellers Items</a></li>
         </ol>
             </nav>
             <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm">
