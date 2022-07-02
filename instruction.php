@@ -52,6 +52,12 @@
         </div>       
     </div>
     </section>
+    <section class= "second_section" >
+            <div class = "line_PFOS">
+                <h1>Shopping Instructions</h1>
+                <p>A complete guide on how to have a blast shopping!</p>
+                </div>
+            </section>
     <section class="cs_section">
         <div class = "line_CS">
            

@@ -427,9 +427,9 @@
           <input class="shadow border"  type="number" placeholder="Contact #" require>
           <textarea class="shadow border" name="" id="" rows="5" placeholder="Write a message" require></textarea>
           <div class="form-group text-center mt-4">
+              <button type="submit" name="login" value="Login" class="btn btn-primary text-white" id="alertify_success_top" required>Submit</button>
               <button type="reset" class="btn btn-danger">Clear</button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button type="submit" name="login" value="Login" class="btn btn-primary text-white" id="alertify_success_top" required>Submit</button>
             </div>
             <br>
         </div>

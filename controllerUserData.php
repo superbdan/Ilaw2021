@@ -55,7 +55,7 @@ if (isset($_POST['signup'])) {
                        Good Day! We, from ILAW Lighting and Equipment Trading would like to inform you that you are about to create your ILAW Account, Please click the confirmation link below:
                        Your OTP is --> $code <-- 
                        Thank you and have a blast shopping!";
-            $sender = "From: sobrangmachoko@gmail.com";
+            $sender = "From: ilawnatinto21@gmail.com";
             if (mail($email, $subject, $message, $sender)) {
                 $info = "We've sent a verification code to your email - $email";
                 $_SESSION['info'] = $info;
@@ -146,7 +146,7 @@ if(isset($_POST['check-email'])){
                 Thank you and have a blast shopping!";" ";
             $sender = "From: jmlibued257@gmail.com";
             if(mail($email, $subject, $message, $sender)){
-                $info = "We've sent a passwrod reset otp to your email - $email";
+                $info = "We've sent a password reset otp to your email - $email";
                 $_SESSION['info'] = $info;
                 $_SESSION['email'] = $email;
                 header('location: reset-code.php');
