@@ -123,7 +123,7 @@
 
       <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
         <div class="table-responsive product-list">
-        <table class="table table-striped table-bordered w-100 d-block d-md-table grid" id="productList">
+        <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="productList">
                   <tbody>
                   <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong>
                     <thead>
