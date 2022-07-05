@@ -60,14 +60,20 @@
     </section>
     <section class= "third_section" >
       <br>
-      <label class="p-2"><strong>Track your order by searching the  <span class="text-primary">Order ID <i>(ex. ILAW-002931)</i></span> in the search bar.</strong></label>
+      <!-- <label class="p-2"><strong>Track your order by searching the  <span class="text-primary">Order ID <i>(ex. ILAW-002931)</i></span> in the search bar.</strong></label> -->
+      <!-- Insert this code if there are no orders pending -->
+      <img src="images/Icons/Qbox.png" width="300px" alt="No_Item">
+			<h1>You haven't ordered anything yet.</h1>
+			<p>You must have a pending order sent to ILAW.<br>Thank you very much and have a blast shopping!</p>
+			<a type="button" href="product.php #checkout" class="btn icon-round m-2 text-white" style="background: #F7941D">Go To Shopping
+			</a>
       <br><br>
-  <form>
+  <!-- <form>
     <div class="container d-flex">
     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
     </div>
-  </form>
+  </form> -->
     <br>
 </section>
     <?php
