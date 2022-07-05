@@ -67,25 +67,25 @@ include('../function.php');
     				</div>
     					<div class="modal-body">
 							<div class="form-group">
-							<label>Item Name</label>
+							<label><b>Item Name:</b></label>
 							<input type="text" name="items_name" id="items_name" class="form-control" required />
 							</div>
 							<div class="form-group">
-                                <label>Category</label>
+                                <label><b>Category:</b></label>
                                 <select style="cursor:pointer" name="category_id" id="category_id" class="form-control" required>
                                     <option value="">--- Select Category ---</option>
                                     <?php echo fill_category_list($connect);?>
                                 </select>
                             </div>
 							<div class="form-group">
-                                <label>Supplier</label>
+                                <label><b>Supplier:</b></label>
                                 <select style="cursor:pointer"  name="supplier_id" id="supplier_id" class="form-control" required>
                                     <option value="">--- Select Supplier ---</option>
                                     <?php echo fill_suppliers_list($connect);?>
                                 </select>
                             </div>
 							<div class="form-group">
-                                <label>Unit of Measurement </label>
+                                <label><b>Unit of Measurement:</b></label>
                                 <select style="cursor:pointer"  name="measurement_id" id="measurement_id" class="form-control" required>
                                     <option value="">--- Select Unit of Measurement ---</option>
                                     <?php echo fill_measurement_list($connect);?>
@@ -93,34 +93,34 @@ include('../function.php');
                             </div>
 							
 							<div class="form-group">
-							<label>In stocks</label>
+							<label><b>In Stocks:</b></label>
 							<input type="text" name="items_stocks" id="items_stocks" class="form-control" required />
 							</div>
 							<div class="form-group">
-							<label>Low stock</label>
+							<label><b>Low Stock:</b></label>
 							<input type="text" name="items_low" id="items_low" class="form-control" required />
 							</div>
 
 							<div class="form-group">
-							<label>Cost</label>
+							<label><b>Cost:</b></label>
 							<input type="text" name="items_cost" id="items_cost" class="form-control" required />
 							</div>
     						<div class="form-group">
-							<label>Selling price</label>
+							<label><b>Selling Price:</b></label>
 							<input type="text" name="items_price" id="items_price" class="form-control" required />
 							</div>
 							
 							<div class="form-group">
-							<label>Product Image 1</label>
-							<input type="file" id="product_img1" name="product_img1" accept= ".jpg, .png" class="form-control">
+							<label><b>1st Product Image:</b></label>
+							<input type="file" id="product_img1" name="product_img1" accept= ".jpg, .png" class="form-control" style="cursor: pointer;">
 							</div>
-							<img src="http://localhost/Capstone/admin/product_images/default-avatar.jpg" width="100" id="img1_db"/> 
+							<img src="../admin/product_images/default-avatar.jpg" width="0" id="img1_db" class="fade"/> 
 
 							<div class="form-group">
-							<label>Product Image 2</label>
-							<input type="file" id="product_img2" name="product_img2" accept= ".jpg, .png" class="form-control" >
+							<label><b>2nd Product Image:</b></label>
+							<input type="file" id="product_img2" name="product_img2" accept= ".jpg, .png" class="form-control" style="cursor: pointer;" >
 							</div>
-							<img src="http://localhost/Capstone/admin/product_images/default-avatar.jpg" width="100" id="img2_db" /> 
+							<img src="../admin/product_images/default-avatar.jpg" width="0" id="img2_db" class="fade"/> 
 
 						</div>
     				
@@ -168,7 +168,6 @@ function printData()
    newWin.document.write('<center><h1>Items Printed Data<h1><center>');
    newWin.document.write(divToPrint.outerHTML);
    newWin.print();
-   newWin.close();
 }
 
 $('.print_table').on('click',function(){
@@ -227,8 +226,8 @@ $(document).ready(function(){
 				$('#items_cost').val(data.items_cost);
 				$('#items_price').val(data.items_price);
 				$('#items_low').val(data.items_low);
-						$('#img1_db').attr("src", "http://localhost/Capstone/admin/product_images/"+data.product_img1);
-				$('#img2_db').attr("src", "http://localhost/Capstone/admin/product_images/"+data.product_img2);
+						$('#img1_db').attr("src", "../admin/product_images/"+data.product_img1);
+				$('#img2_db').attr("src", "../admin/product_images/"+data.product_img2);
 				$('.modal-title').html("<i class='fa fa-pencil-square-o'></i> Edit items");
 				$('#items_id').val(items_id);
 				$('#action').val('Edit');

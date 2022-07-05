@@ -201,7 +201,7 @@ require "database_connection.php";
 
       // Basic example
 $(document).ready(function () {
-  $('#productList').DataTable({
+  $('#get_product').DataTable({
     "pagingType": "simple" // "simple" option for 'Previous' and 'Next' buttons only
   });
   $('.dataTables_length').addClass('bs-select');

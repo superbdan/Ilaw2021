@@ -246,7 +246,7 @@ if(isset($_POST['btn_action']))
 			</tr> 
 			<tr>  
 				 <td width="30%"><label>Pictures</label></td>  
-				 <td width="70%"><img src="http://localhost/Capstone/admin/product_images/'.$row["product_img1"].'" width="100" id="img2_db" /> <img src="http://localhost/Capstone/admin/product_images/'.$row["product_img2"].'" width="100" id="img2_db" /> </td>
+				 <td width="70%"><img src="../admin/product_images/'.$row["product_img1"].'" width="100" id="img2_db" /> <img src="../admin/product_images/'.$row["product_img2"].'" width="100" id="img2_db" /> </td>
 				  
 			</tr>  
 	   ';  

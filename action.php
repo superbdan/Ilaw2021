@@ -90,7 +90,7 @@ if(isset($_POST["page"])){
 	$statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
-	$pageno = ceil($result/9);
+	$pageno = ceil($result/9999999999);
 	for($i=1;$i<=$pageno;$i++){
 		echo "
 			<li><a href='#' page='$i' id='page'>$i</a></li>
@@ -98,7 +98,7 @@ if(isset($_POST["page"])){
 	}
 }
 if(isset($_POST["getProduct"])){
-	$limit = 10;
+	$limit = 999999999;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;

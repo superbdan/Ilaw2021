@@ -64,7 +64,7 @@ foreach($result as $row)
 	$sub_array = array();
 	$sub_array[] = $row['items_name'];
 	$sub_array[] = $row['category_name'];
-	$sub_array[] = $row['items_cost'];
+	$sub_array[] = "₱". + $row['items_cost'];
 	$sub_array[] = "₱". + $row['items_price'];
 	$sub_array[] = $row['items_stocks'];
 	$sub_array[] = $row['supplier_name'];

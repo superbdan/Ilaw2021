@@ -114,7 +114,6 @@ $result = mysqli_query($connect, $query);
         newWin.document.write('<center><h1>Customers Printed Data(To Received)<h1><center>');
         newWin.document.write(divToPrint.outerHTML);
         newWin.print();
-        newWin.close();
         }
 
         $('.print_table').on('click',function(){
