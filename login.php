@@ -2,6 +2,17 @@
 //login.php
 require_once "controllerUserData.php";
 
+//in action.php page if user click on "ready to checkout" button that time we will pass data in a form from action.php page
+if (isset($_POST["login_user_with_product"])) {
+	//this is product list array
+	$product_list = $_POST["items_id"];
+	//here we are converting array into json format because array cannot be store in cookie
+	$json_e = json_encode($product_list);
+	//here we are creating cookie and name of cookie is product_list
+	setcookie("product_list",$json_e,strtotime("+1 day"),"/","","",TRUE);
+
+}
+
 // if (isset($_SESSION['type'])) {
 //   header("location: index.php");
 // }
@@ -134,6 +145,8 @@ require_once "controllerUserData.php";
   <script src="linkscript/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
   <!-- Custom CSS-->
   <link href="css/login.css" rel="stylesheet" />
+  <script src="main.js"></script>
+  <script src="js/jquery2.js"></script>
   <link href="css/style_e-commerce.css" rel="stylesheet" />
 </head>
 

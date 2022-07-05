@@ -1,5 +1,6 @@
 <?php
-$ip_add = getenv("REMOTE_ADDR");
+$ip_add = $_SERVER['REMOTE_ADDR'];
+
 include('database_connection.php');
 if(isset($_POST["category"])){
 	/*$category_query = "SELECT * FROM category";
@@ -98,7 +99,7 @@ if(isset($_POST["page"])){
 	}
 }
 if(isset($_POST["getProduct"])){
-	$limit = 999999999;
+	$limit = 20;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;
@@ -418,8 +419,8 @@ if (isset($_POST["Common"])) {
 			</a>';
 		}elseif(isset($result)) {
 			//display user cart item with "Ready to checkout" button if user is not login
-			echo "<form method='post' action='checkout.php'>
-			<div class='cart_header container row' style='display: flex;
+			echo "<form method='POST' action='login.php'>
+					<div class='cart_header container row' style='display: flex;
 						align-items: center;'>
 						<div class='col-2'>
 							<div class='align-middle'><strong>Action</strong></div>
@@ -439,7 +440,7 @@ if (isset($_POST["Common"])) {
 						<div class='col-md-2'>
 							<div class='align-middle'><strong>Sub Total</strong></div>
 						</div>
-                  </div>
+                 	</div>
 			";
 				$n=0;
 				foreach($result as $row){
@@ -463,11 +464,11 @@ if (isset($_POST["Common"])) {
 									</div>
 								</div>
 								
-								<input type="hidden" name="product_id[]" value="'.$items_id.'"/>
+								<input type="hidden" name="items_id[]" value="'.$items_id.'"/>
 								<input type="hidden" name="" value="'.$cart_item_id.'"/>
-
-								
-									<div class="col"><img class="img-responsive bg-white shadow" width="150px" src="admin/product_images/'.$product_img1.'"></div>
+									<div class="col">
+										<img class="img-responsive bg-white shadow" width="150px" src="admin/product_images/'.$product_img1.'">
+									</div>
 									<div class="col-md-3">'.$items_name.'</div>
 									<div class="col"><input type="number" min="1" class="form-control form-control-sm qty bg-white shadow" value="'.$qty.'" ></div>
 									<div class="col-md-2"><input type="hidden" class="form-control price" value="'.$items_price.'" readonly="readonly">'.CURRENCY.''.$items_price.'</div>
@@ -489,43 +490,57 @@ if (isset($_POST["Common"])) {
 								
 					';
 				if (!isset($_SESSION["uid"])) {
+					// echo '
+					// <a type="button" href="product.php #products" class="btn btn-secondary icon-round mb-3">Update Cart</a>&nbsp;
+                    // <a type="button" href="checkout.php #checkout" class="btn icon-round mb-3 text-white" style="background: #F7941D">Checkout
+                    // </a>
+					// 		</form>';
+					
+					echo '<input type="submit" style="float:center;" name="login_user_with_product" class="btn btn-info btn-lg" value="Ready to Checkout">
+					</form>';
+
+				}else if(isset($_SESSION["uid"])){
+					//Paypal checkout form
+					// echo '
+					// 	</form>
+					// 	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+					// 		<input type="hidden" name="cmd" value="_cart">
+					// 		<input type="hidden" name="business" value="shoppingcart@khanstore.com">
+					// 		<input type="hidden" name="upload" value="1">';
+							  
+					// 		$x=0;
+					// 		$query = "SELECT a.items_id,a.items_name,a.items_price,a.product_img1,b.id,b.qty FROM items a,cart b WHERE a.items_id=b.p_id AND b.user_id='$_SESSION[uid]'";
+					// 		$query = mysqli_query($con,$sql);
+					// 		foreach($result as $row){
+					// 			$x++;
+					// 			echo  	
+					// 				'<input type="hidden" name="item_name_'.$x.'" value="'.$row["items_name"].'">
+					// 			  	 <input type="hidden" name="item_number_'.$x.'" value="'.$x.'">
+					// 			     <input type="hidden" name="amount_'.$x.'" value="'.$row["items_price"].'">
+					// 			     <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
+					// 			}
+							  
+					// 		echo   
+					// 			'<input type="hidden" name="return" value="http://localhost/project1/payment_success.php"/>
+					//                 <input type="hidden" name="notify_url" value="http://localhost/KhanStore/payment_success.php">
+					// 				<input type="hidden" name="cancel_return" value="http://localhost/KhanStore/cancel.php"/>
+					// 				<input type="hidden" name="currency_code" value="USD"/>
+					// 				<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
+					// 				<input style="float:right;margin-right:80px;" type="image" name="submit"
+					// 					src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
+					// 					alt="PayPal - The safer, easier way to pay online">
+					// 			</form>';
+					// echo '
+					// <a type="button" href="product.php #products" class="btn btn-secondary icon-round mb-3">Update Cart</a>&nbsp;
+                    // <a type="button" href="checkout.php #checkout" class="btn icon-round mb-3 text-white" style="background: #F7941D">Checkout
+                    // </a>
+					// 		</form>';
+
 					echo '
 					<a type="button" href="product.php #products" class="btn btn-secondary icon-round mb-3">Update Cart</a>&nbsp;
                     <a type="button" href="checkout.php #checkout" class="btn icon-round mb-3 text-white" style="background: #F7941D">Checkout
                     </a>
-							</form>';
-					
-				}else if(isset($_SESSION["uid"])){
-					//Paypal checkout form
-					echo '
-						</form>
-						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-							<input type="hidden" name="cmd" value="_cart">
-							<input type="hidden" name="business" value="shoppingcart@khanstore.com">
-							<input type="hidden" name="upload" value="1">';
-							  
-							$x=0;
-							$query = "SELECT a.items_id,a.items_name,a.items_price,a.product_img1,b.id,b.qty FROM items a,cart b WHERE a.items_id=b.p_id AND b.user_id='$_SESSION[uid]'";
-							$query = mysqli_query($con,$sql);
-							foreach($result as $row){
-								$x++;
-								echo  	
-									'<input type="hidden" name="item_name_'.$x.'" value="'.$row["items_name"].'">
-								  	 <input type="hidden" name="item_number_'.$x.'" value="'.$x.'">
-								     <input type="hidden" name="amount_'.$x.'" value="'.$row["items_price"].'">
-								     <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
-								}
-							  
-							echo   
-								'<input type="hidden" name="return" value="http://localhost/project1/payment_success.php"/>
-					                <input type="hidden" name="notify_url" value="http://localhost/KhanStore/payment_success.php">
-									<input type="hidden" name="cancel_return" value="http://localhost/KhanStore/cancel.php"/>
-									<input type="hidden" name="currency_code" value="USD"/>
-									<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
-									<input style="float:right;margin-right:80px;" type="image" name="submit"
-										src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
-										alt="PayPal - The safer, easier way to pay online">
-								</form>';
+						</form>';
 				}
 			}
 	}
