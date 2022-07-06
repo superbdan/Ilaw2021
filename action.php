@@ -144,7 +144,7 @@ if(isset($_POST["getProduct"])){
 			echo "
 			
 			<li class='myItem shadow border'>
-				<div class='container product'>
+				<div class='container product' >
 					<div class='row product-image'>
 							<img class='pic-1' alt='product_image' src='admin/product_images/$product_img1' style='width: 260px; padding:10px'/>
 								<img class='pic-2' alt='product_image' src='admin/product_images/$product_img2' style='width: 260px; padding:10px'/>
@@ -479,11 +479,8 @@ if (isset($_POST["Common"])) {
 				echo '<center>
 				<hr>
 				<div class="col-md-6">
-				  <label class=" mb-3 border shadow icon-round bg-secondary text-white">Add Note
-				  </label>
 				  <br>
-				  <textarea class="p-2 border bg-white shadow" name="take_note" style="resize:none; height: 100px; width: 100%" id="take_note"  placeholder="Write your message here..." ></textarea>
-				</div> <div class="text-left mt-2">
+				</div> <div class="text-left mt-1">
 				<h3 class="mt-3"><b class="net_total"></b></h3>
 				<p>Shipping, taxes, and discounts will be calculated at checkout.</p>
 				</div>

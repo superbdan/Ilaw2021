@@ -64,7 +64,7 @@
     <div class="mt-4 mb-4 p-3 border shadow lh-sm">
         <div class="container ">
     	<div class="card border shadow">
-    		<div class="card-header border">Reviews and Ratings</div>
+    		<div class="card-header border"><b>Reviews and Ratings</b></div>
     		<div class="card-body ">
     			<div class="row">
     				<div class="col-sm-4 text-center">
@@ -144,7 +144,7 @@
   	<div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
 	      	<div class="modal-header">
-	        	<h5 class="modal-title">Review Any Product and Shop Services</h5>
+	        	<h5 class="modal-title"><b>Review Any Product and Shop Services</b></h5>
 	        	<a type="button" data-dismiss="modal" aria-label="Close">
 	          		<span aria-hidden="true"><i class="fas fa-times"></i></span>
           </a>
@@ -191,7 +191,7 @@
             </div>
 
 	        	<div class="form-group text-center mt-4">
-	        		<button type="button" class="btn btn-primary" id="save_review">Submit Review</button>
+	        		<button type="button" class="btn btn-primary" id="save_review"><i class="fas fa-star"></i> Submit Review</button>
 	        	</div>
 	      	</div>
     	</div>

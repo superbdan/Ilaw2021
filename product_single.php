@@ -60,6 +60,7 @@
         </div>
     </section>
     <main class="product_main" id="prod_single">
+    <br>
     <div class="mt-4 mb-4 p-3 bg-white border shadow-sm lh-sm container">
                     <!--Product detail-->
                     <div class="product-list">
@@ -100,29 +101,13 @@
 
                                     <center><div class="col-sm-6 col-6 pl-0 pr-4 mb-4 mt-4">
                                         <div class="input-group mt-2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-secondary rounded-0 pb-2" style="z-index: 1" type="button"><i class="fa fa-minus"></i></button>
-                                            </div>
-                                            <input type="text" size="3" class="form-control bg-light text-center mr-3" readonly value="1" maxlength="3">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-secondary rounded-0 pb-2" style="z-index: 1" type="button"><i class="fa fa-plus"></i></button>
-                                            </div>
-                                        </div>
-                                    </div></center>
-
-                                    <div>
-                                        <button type="button" class="btn btn-theme rounded-0 mr-3" style="color: white">
+                                            <input type="number" size="3" class="form-control bg-light text-center mr-3" value="1" min="1" maxlength="3">
+                                            &nbsp; &nbsp;
+                                            <button type="button" class="btn btn-theme rounded-0 mr-3" style="color: white">
                                             <i class="fa fa-shopping-cart mr-3"></i> ADD TO CART
                                         </button>
-
-                                        <button type="button" class="btn btn-outline-theme rounded-0 mr-3 px-3">
-                                            <i class="fa fa-heart"></i>
-                                        </button>
-
-                                        <button type="button" class="btn btn-outline-theme rounded-0 mr-3 px-3">
-                                            <i class="fa fa-eye"></i>
-                                        </button>
-                                    </div>
+                                        </div>
+                                    </div></center>
                                 </div>
 
                             </div>

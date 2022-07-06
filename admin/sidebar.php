@@ -1,6 +1,6 @@
 
 <!--Page loader-->
-<div class="loader-wrapper">
+<div class="loader-wrapper overlay">
         <div class="loader-circle">
             <div class="loader"> </div>
         </div>

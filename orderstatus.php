@@ -61,19 +61,105 @@
     <section class= "third_section" >
       <br>
       <!-- <label class="p-2"><strong>Track your order by searching the  <span class="text-primary">Order ID <i>(ex. ILAW-002931)</i></span> in the search bar.</strong></label> -->
-      <!-- Insert this code if there are no orders pending -->
+
+      <!-- Insert this code if there are no orders pending 
       <img src="images/Icons/Qbox.png" width="300px" alt="No_Item">
 			<h1>You haven't ordered anything yet.</h1>
 			<p>You must have a pending order sent to ILAW.<br>Thank you very much and have a blast shopping!</p>
 			<a type="button" href="product.php #checkout" class="btn icon-round m-2 text-white" style="background: #F7941D">Go To Shopping
 			</a>
-      <br><br>
+      <br><br>-->
+      
   <!-- <form>
     <div class="container d-flex">
     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
     </div>
   </form> -->
+  <div class="container">
+    <a href="#">
+    	<div class="card border shadow">
+    		<ul class="card-header border d-flex justify-content-between">
+          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been delivered |<span class="text-success"> Order Completed</span></li></b>
+        </ul>
+    		<div class="card-body ">
+    			<div class="row">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto beatae obcaecati itaque deleniti velit, ipsum quas temporibus fugit veniam iusto, quibusdam accusamus! Aperiam quasi maiores aspernatur! Dolorum sed ipsa alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quaerat hic quam! Dignissimos recusandae veniam cum facilis dolorem? Quaerat atque quisquam ex laboriosam quam delectus reiciendis fugit voluptates alias ab.
+          </div>
+        </div>
+        <ul class="card-header d-flex justify-content-end">
+          <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
+        <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
+        </ul>
+        </div>
+      </div>
+        </a>
+  </div><br>
+
+  <div class="container">
+    <a href="#">
+    	<div class="card border shadow">
+    		<ul class="card-header border d-flex justify-content-between">
+          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been sent to courier | <span class="text-primary"> Order Shipped Out</span></li></b>
+        </ul>
+    		<div class="card-body ">
+    			<div class="row">
+          </div>
+        </div>
+        </div>
+      </div>
+        </a>
+  </div><br>
+
+  <div class="container">
+    <a href="#">
+    	<div class="card border shadow">
+    		<ul class="card-header border d-flex justify-content-between">
+          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been processed | <span class="text-primary"> Order Paid</span></li></b>
+        </ul>
+    		<div class="card-body ">
+    			<div class="row">
+          </div>
+        </div>
+        </div>
+      </div>
+        </a>
+  </div><br>
+
+  <div class="container">
+    <a href="#">
+    	<div class="card border shadow">
+    		<ul class="card-header border d-flex justify-content-between">
+          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel will be processed | <span class="text-primary"> Order Placed</span></li></b>
+        </ul>
+    		<div class="card-body ">
+    			<div class="row">
+          </div>
+        </div>
+        </div>
+      </div>
+        </a>
+  </div><br>
+
+  <div class="container">
+    <a href="#">
+    	<div class="card border shadow">
+    		<ul class="card-header border d-flex justify-content-between">
+          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been cancelled | <span class="text-danger"> Order Cancelled</span></li></b>
+        </ul>
+    		<div class="card-body ">
+    			<div class="row">
+          </div>
+        </div>
+        </div>
+      </div>
+        </a>
+  </div><br>
     <br>
 </section>
     <?php

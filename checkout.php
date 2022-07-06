@@ -98,12 +98,15 @@
         </div>
 
         <div id="deliveryModal" class="modal fade ">
-    	<div class="modal-dialog ">
+    	<div class="modal-dialog modal-lg ">
     		<form method="post" id="category_form">
     			<div class="modal-content bd-example-modal-lg">
-    				<div class="modal-header">
-						<h5 class="modal-title text-primary"><i class="fas fa-map-marker-alt"></i><strong> Delivery Address</h5>
-    				</div>
+          <div class="modal-header">
+	        	<h5 class="modal-title"><b>Delivery Address</b></h5>
+	        	<a type="button" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </a>
+	      	</div>
     				<div class="modal-body text-center">
     					Default Address:
               <br>
@@ -112,10 +115,12 @@
             <label class="mb-2">Input New Address:</label>
             <input type="text" name="category_name" id="category_name" class="form-control" required />
     				</div>
+            <center>
     				<div class="modal-footer">
-    					<input type="submit" name="action" id="action" class="btn btn-primary" value="Save Changes" />
-    					<button type="button" class="btn btn-danger"data-dismiss="modal">Close</button>
+    					<button type="submit" name="action" id="action" class="btn btn-primary" ><i class="fas fa-save"></i> Save Changes</button>
+              <button type="reset" name="action" id="action" class="btn btn-danger" ><i class="fas fa-trash"></i> Clear</button>
     				</div>
+            </center>
     			</div>
     		</form>
     	</div>
@@ -172,7 +177,7 @@
     <div class="col-sm-7 p-3 border button-container shadow-sm blockquote" style="background: #f1f5f9;"> <center>
         <h6 class="text-primary"><i class="fas fa-envelope"></i><strong> Customer Note </strong>
               <div class="col-sm-12 pt-2">
-              <textarea type="text" readonly class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Full Address">Please dont ruin the box. Thank you!</textarea>
+              <textarea type="text" class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Write your message here..."></textarea>
               </div>
               <h6 class="text-primary pt-3"><i class="fas fa-paper-plane"></i><strong> Courier</strong>
        
@@ -268,7 +273,7 @@
                           <label class="pt-1">Bank Name: </label>
                         </span>
                         &nbsp;
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" required>
                             
                     </div>
                     <center><h6 class="pt-4" style="font-size: 12px"><strong>Note: Bank Name Must be accurate and similar to the screenshot.</strong></h6></center>
@@ -304,7 +309,7 @@
                     </table>
                     <br>
                     <center>
-                    <button type="button" class="btn icon-round mb-3 text-white" style="background: #F7941D">Place Order</button></center>
+                    <button type="button" class="btn icon-round mb-3 text-white" style="background: #F7941D"><i class="fas fa-shopping-cart"></i>  Place Order</button></center>
                     </div>
                 </div>
 
