@@ -150,7 +150,7 @@ if(isset($_POST["getProduct"])){
 								<img class='pic-2' alt='product_image' src='admin/product_images/$product_img2' style='width: 260px; padding:10px'/>
 					<div class='col p-2'>
 						<div class='row'>
-  							<div class='col-12 h5 text-primary text-truncate'><strong>$items_name</strong></div>
+  							<div class='col-12 h5 text-primary item-name'><strong>$items_name</strong></div>
 							  <p class='item-description'>
 							  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem temporibus veniam.Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem temporibus veniam.
 							</p>

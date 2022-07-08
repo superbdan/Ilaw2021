@@ -189,11 +189,13 @@ if (isset($_POST["login_user_with_product"])) {
             if (count($errors) > 0) {
             ?>
               <div class="alert alert-danger text-center">
+                <b>
                 <?php
                 foreach ($errors as $showerror) {
                   echo $showerror;
                 }
                 ?>
+                </b>
               </div>
             <?php
             }
@@ -229,31 +231,6 @@ if (isset($_POST["login_user_with_product"])) {
         </div>
         <div class="tab-pane fade" id="custom-profile-2" role="tabpanel" aria-labelledby="nav-profile-2">
           <form method="POST" id="register">
-            <?php
-            if (count($errors) == 1) {
-            ?>
-              <div class="alert alert-danger text-center">
-                <?php
-                foreach ($errors as $showerror) {
-                  echo $showerror;
-                }
-                ?>
-              </div>
-            <?php
-            } elseif (count($errors) > 1) {
-            ?>
-              <div class="alert alert-danger">
-                <?php
-                foreach ($errors as $showerror) {
-                ?>
-                  <li><?php echo $showerror; ?></li>
-                <?php
-                }
-                ?>
-              </div>
-            <?php
-            }
-            ?>
             <div class="form-group">
               <input type="text" name="first_name" class="form-control" placeholder="First Name" autofocus required>
             </div>
@@ -309,14 +286,16 @@ if (isset($_POST["login_user_with_product"])) {
             </div>
             <br>
             <div class="form-group">
-              <input type="number" name="contact" class="form-control" placeholder="Contact #" required>
+              <input type="number" name="contact" class="form-control" placeholder="Contact #" min="0" required>
             </div>
             <br>
+            <label for="pasword" class="text-white text-center h6">Must have at least <b>1 Capital Letter</b>, <b> insert a Number</b>, and exceeds to <b>8 characters</b></label>
             <div class="form-group">
               <input type="password" name="password" class="form-control" placeholder="Password" id="myInput" pattern="(?=.*\d).{8,}" required>
             </div>
             <br>
             <div class="form-group">
+              
               <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password" id="myInput" pattern="(?=.*\d).{8,}" onkeyup='check();' required>
               <span class="field-icon2" id='message'></span>
             </div>

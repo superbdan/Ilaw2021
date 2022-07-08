@@ -131,7 +131,8 @@ require "database_connection.php";
                                     <span> Filter Price </span>
                                 </a>
                                 <ul id="filter_price">
-                                <label for="customRange2" class="form-label"></label><input type="range" class="form-range" min="0" max="5" id="customRange2">
+                                <label for="customRange1" class="form-label">Example range</label>
+                                <input type="range" class="form-range" id="customRange1">
                    </ul><hr>
                    
                 </ul>

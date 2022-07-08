@@ -19,6 +19,7 @@
     <script src="linkscript/owl.carousel.min.js" crossorigin="anonymous"></script>
     <!-- Custom CSS-->
     <link href="css/owl_carousel.css" rel="stylesheet" />
+    <link href="css/listandgrid.css" rel="stylesheet" />
     <link href="css/style_e-commerce.css" rel="stylesheet" />
     
 </head>
@@ -77,18 +78,27 @@
     </div>
   </form> -->
   <div class="container">
-    <a href="#">
+    <a href="orderstatus2.php #orderstatus2">
     	<div class="card border shadow">
     		<ul class="card-header border d-flex justify-content-between">
-          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
-          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been delivered |<span class="text-success"> Order Completed</span></li></b>
+          <li class="text-dark"><b>Order ID: <i>19028369</i><li>&nbsp;
+          <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been delivered <span class="text-dark">|<span><span class="text-success"> Order Completed</span></li></b>
         </ul>
-    		<div class="card-body ">
-    			<div class="row">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto beatae obcaecati itaque deleniti velit, ipsum quas temporibus fugit veniam iusto, quibusdam accusamus! Aperiam quasi maiores aspernatur! Dolorum sed ipsa alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quaerat hic quam! Dignissimos recusandae veniam cum facilis dolorem? Quaerat atque quisquam ex laboriosam quam delectus reiciendis fugit voluptates alias ab.
+    		<div class="card-body">
+        <div class="row">
+          <img alt='product_image' src="admin/images/Profiles/tarred.jpeg" style='width: 200px;'/>
+          <div class="col text-dark text-start">
+						<div class='row'>
+                <div class="col-12 short-div text-bold"><b>LED Strip Light </b></div>
+                <div class="col-12 short-div item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi accusantium facere culpa ullam ipsum, consequuntur ipsa ad provident commodi reiciendis alias est accusamus maiores modi unde natus. Iste, voluptates maxime?</div>
+                <div class="col-12 short-div">x1</div>
+                  <div class="col-12 short-div"><u>And <b>4</b> Products</u></div>
+            </div>
+          </div>
           </div>
         </div>
-        <ul class="card-header d-flex justify-content-end">
+        <ul class="card-header d-flex justify-content-between">
+          <li class="text-dark mt-2">Date Placed: <b>07/07/2022</b></li>
           <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
         <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
         </ul>
@@ -98,17 +108,32 @@
   </div><br>
 
   <div class="container">
-    <a href="#">
+    <a href="orderstatus2.php #orderstatus2">
     	<div class="card border shadow">
     		<ul class="card-header border d-flex justify-content-between">
-          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-dark"><b>Order ID: <i>19028370</i><li>&nbsp;
           <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been sent to courier | <span class="text-primary"> Order Shipped Out</span></li></b>
         </ul>
-    		<div class="card-body ">
-    			<div class="row">
+    		<div class="card-body">
+        <div class="row">
+          <img alt='product_image' src="admin/images/Profiles/tarred.jpeg" style='width: 200px;'/>
+          <div class="col text-dark text-start">
+						<div class='row'>
+                <div class="col-12 short-div text-bold"><b>LED Strip Light </b></div>
+                <div class="col-12 short-div item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi accusantium facere culpa ullam ipsum, consequuntur ipsa ad provident commodi reiciendis alias est accusamus maiores modi unde natus. Iste, voluptates maxime?</div>
+                <div class="col-12 short-div">x1</div>
+                  <div class="col-12 short-div"><u>And <b>4</b> Products</u></div>
+            </div>
+          </div>
           </div>
         </div>
+        <ul class="card-header d-flex justify-content-between">
+          <li class="text-dark mt-2">Date Placed: <b>07/07/2022</b></li>
+          <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
+        <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
+        </ul>
         </div>
+      </div>
       </div>
         </a>
   </div><br>
@@ -117,14 +142,29 @@
     <a href="#">
     	<div class="card border shadow">
     		<ul class="card-header border d-flex justify-content-between">
-          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-dark"><b>Order ID: <i>19028371</i><li>&nbsp;
           <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been processed | <span class="text-primary"> Order Paid</span></li></b>
         </ul>
-    		<div class="card-body ">
-    			<div class="row">
+    		<div class="card-body">
+    		<div class="row">
+          <img alt='product_image' src="admin/images/Profiles/tarred.jpeg" style='width: 200px;'/>
+          <div class="col text-dark text-start">
+						<div class='row'>
+                <div class="col-12 short-div text-bold"><b>LED Strip Light </b></div>
+                <div class="col-12 short-div item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi accusantium facere culpa ullam ipsum, consequuntur ipsa ad provident commodi reiciendis alias est accusamus maiores modi unde natus. Iste, voluptates maxime?</div>
+                <div class="col-12 short-div">x1</div>
+                  <div class="col-12 short-div"><u>And <b>4</b> Products</u></div>
+            </div>
+          </div>
           </div>
         </div>
+        <ul class="card-header d-flex justify-content-between">
+          <li class="text-dark mt-2">Date Placed: <b>07/07/2022</b></li>
+          <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
+        <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
+        </ul>
         </div>
+      </div>
       </div>
         </a>
   </div><br>
@@ -133,14 +173,29 @@
     <a href="#">
     	<div class="card border shadow">
     		<ul class="card-header border d-flex justify-content-between">
-          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-dark"><b>Order ID: <i>19028372</i><li>&nbsp;
           <li class="text-primary"><i class="fas fa-truck"></i> Parcel will be processed | <span class="text-primary"> Order Placed</span></li></b>
         </ul>
-    		<div class="card-body ">
-    			<div class="row">
+    		<div class="card-body">
+          <div class="row">
+          <img alt='product_image' src="admin/images/Profiles/tarred.jpeg" style='width: 200px;'/>
+          <div class="col text-dark text-start">
+						<div class='row'>
+                <div class="col-12 short-div text-bold"><b>LED Strip Light </b></div>
+                <div class="col-12 short-div item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi accusantium facere culpa ullam ipsum, consequuntur ipsa ad provident commodi reiciendis alias est accusamus maiores modi unde natus. Iste, voluptates maxime?</div>
+                <div class="col-12 short-div">x1</div>
+                  <div class="col-12 short-div"><u>And <b>4</b> Products</u></div>
+            </div>
+          </div>
           </div>
         </div>
+        <ul class="card-header d-flex justify-content-between">
+          <li class="text-dark mt-2">Date Placed: <b>07/07/2022</b></li>
+          <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
+        <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
+        </ul>
         </div>
+      </div>
       </div>
         </a>
   </div><br>
@@ -149,14 +204,29 @@
     <a href="#">
     	<div class="card border shadow">
     		<ul class="card-header border d-flex justify-content-between">
-          <li class="text-dark"><b>Order ID: <i>ILAW-0012394</i><li>&nbsp;
+          <li class="text-dark"><b>Order ID: <i>19028373</i><li>&nbsp;
           <li class="text-primary"><i class="fas fa-truck"></i> Parcel has been cancelled | <span class="text-danger"> Order Cancelled</span></li></b>
         </ul>
-    		<div class="card-body ">
-    			<div class="row">
+    		<div class="card-body">
+        <div class="row">
+          <img alt='product_image' src="admin/images/Profiles/tarred.jpeg" style='width: 200px;'/>
+          <div class="col text-dark text-start">
+						<div class='row'>
+                <div class="col-12 short-div text-bold"><b>LED Strip Light </b></div>
+                <div class="col-12 short-div item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi accusantium facere culpa ullam ipsum, consequuntur ipsa ad provident commodi reiciendis alias est accusamus maiores modi unde natus. Iste, voluptates maxime?</div>
+                <div class="col-12 short-div">x1</div>
+                  <div class="col-12 short-div"><u>And <b>4</b> Products</u></div>
+            </div>
+          </div>
           </div>
         </div>
+        <ul class="card-header d-flex justify-content-between">
+          <li class="text-dark mt-2">Date Placed: <b>07/07/2022</b></li>
+          <li><button type="button" onclick="window.location='reviews.php';"class="btn btn-primary" ><i class="fas fa-star"></i> Rate Service</button>
+        <button type="button" onclick="window.location='reviews.php';"class="btn btn-success" ><i class="fas fa-shopping-cart"></i> Buy Again</button></li>
+        </ul>
         </div>
+      </div>
       </div>
         </a>
   </div><br>
