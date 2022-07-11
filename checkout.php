@@ -76,29 +76,20 @@
                 </ol>
             </nav>
         </div>
-      <div class = "line_CS pt-3">
-        <div class="p-4 border-top border-primary button-container shadow-sm blockquote pb-3 m-1" style="background: #f1f5f9;">
+      <div class = "line_CS pt-3" id="user_address">
+        <div class="p-4 border-top border-primary button-container shadow-sm blockquote pb-3 m-1" style="background: #f1f5f9;" id="user_info">
           <h6 class="text-primary"><i class="fas fa-map-marker-alt"></i><strong> Delivery Address</strong>
-          <center><div class="form-group row d-flex">
-              <div class="col-sm-3 pt-3">
-                <input type="text" readonly class="form-control form-control-sm center " style="text-align: center; resize: vertical; background: #f1f5f9; border: none" placeholder="Full Name" value="John Patrick M. Lingahan" />
-                <span style="font-size: 12px"><strong>09567485622</strong></span>
-              </div>
-              <div class="col-sm-5 pt-2">
-                <textarea type="text" readonly class="form-control center" style=" text-align: center; resize: none; background: #f1f5f9; border: none" placeholder="Full Address">159 General Malvar Street San Vicente Biñan City Laguna</textarea>
-              </div>
-              <div class="col-sm-2 pt-3">
-              <span style="font-size: 12px"><strong>Default</strong></span>
-              </div>
-              <div class="col-sm-2 pt-2">
-              <center><button type="button" name="deliver_add" id="delivery_add"
-              data-toggle="modal" data-target="#deliveryModal" class="btn btn-outline-secondary">Change</button></center>
-              </div>
-          </div></center>
+          <!-- fetch all data in action.php -->
         </div>
+      </div>
 
+<<<<<<< HEAD
         <div id="deliveryModal" class="modal fade ">
     	<div class="modal-dialog modal-lg ">
+=======
+      <div id="deliveryModal" class="modal fade ">
+    	<div class="modal-dialog ">
+>>>>>>> bc48002 (adding checkout form)
     		<form method="post" id="category_form">
     			<div class="modal-content bd-example-modal-lg">
           <div class="modal-header">
@@ -128,19 +119,9 @@
 
       <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
         <div class="table-responsive product-list">
-        <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="productList">
-                  <tbody>
-                  <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong>
-                    <thead>
-								          <tr>
-                          <th class="text-center">Image</th>
-                          <th class="text-center">Product</th>
-                          <th class="text-center">Price</th>
-                          <th class="text-center">Quantity</th>
-                          <th class="text-center">Sub Total</th>
-                        </tr>
-							      </thead>
-                    <tr>
+        <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="cart_view">
+         
+                    <!-- <tr>
                         <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
                         <td class="align-middle text-center">
                             <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
@@ -148,29 +129,10 @@
                         <td class="align-middle text-center">₱450</td>
                         <td class="align-middle text-center">2x</td>
                         <td class="align-middle text-center">₱900</td>
-                    </tr>
+                    </tr> -->
 
-                    <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr>
-
-                    <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr>
-                    </tbody>
-                    </table>
+          </tbody>
+         </table>
         </div>
       </div>      
   <div class="d-flex justify-content-around container-fluid">

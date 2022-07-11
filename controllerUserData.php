@@ -108,12 +108,11 @@ if (isset($_POST['login'])) {
         $fetch = mysqli_fetch_assoc($res);
         $fetch_pass = $fetch['user_password'];
         $fetch_access = $fetch['user_type'];
-        $uid = $fetch['user_id'];
         if (password_verify($password, $fetch_pass)) {
 
             $row = mysqli_fetch_array($res);
 
-            $_SESSION['uid'] = 5;
+            $_SESSION['uid'] = $fetch['user_id'];
             $_SESSION['name'] = $fetch["first_name"];
             $ip_add = getenv("REMOTE_ADDR");
             if (isset($_COOKIE["product_list"])) {

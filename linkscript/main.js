@@ -1,7 +1,11 @@
+
 $(document).ready(function(){
 	cat();
 	brand();
 	product();
+	viewCart();
+	userAddress();
+	totalPayment();
 	//cat() is a funtion fetching category record from database whenever page is load
 	function cat(){
 		$.ajax({
@@ -242,6 +246,47 @@ $(document).ready(function(){
 			}
 		})
 	}
+
+	function userAddress(){
+		$('.overlay').show();
+		   $.ajax({
+			   url : "action.php",
+			   method : "POST",
+			   data : {Regular:1, userAddress:1},
+			   success : function(data){	
+				    $("#user_address").html(data);
+				
+			   }
+		   })
+	   }
+	   
+	function viewCart(){
+		$('.overlay').show();
+		   $.ajax({
+			   url : "action.php",
+			   method : "POST",
+			   data : {Regular:1, viewCart:1},
+			   success : function(data){	
+				$('.overlay').hide();
+				   $("#cart_view").html(data);
+				   net_total();
+			   }
+		   })
+	   }
+	   function totalPayment(){
+		$('.overlay').show();
+		   $.ajax({
+			   url : "action.php",
+			   method : "POST",
+			   data : {Regular:1, viewCart:1},
+			   success : function(data){	
+				$('.overlay').hide();
+				   $("#total_payment").html(data);
+				   net_total();
+			   }
+		   })
+	   }
+
 	/*
 		net_total function is used to calcuate total amount of cart item
 	*/
@@ -256,7 +301,7 @@ $(document).ready(function(){
 		$('.total').each(function(){
 			net_total += ($(this).val()-0);
 		})
-		$('.net_total').html("Total : "+ CURRENCY+ " " +net_total);
+		$('.net_total').html("Total : "+ CURRENCY + " " + net_total);
 	}
 
 	//remove product from cart

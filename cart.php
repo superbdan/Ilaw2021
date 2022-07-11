@@ -74,17 +74,16 @@ On our website, you can discover a wide variety of items with awesome features.<
 			</div>
       <div class="item_cart">
       <div class="display_product">
-            <div class = "product_container2">
-            <div class="table-responsive product-list m-3">
-              <table class="table table-striped table-bordered w-100 d-block d-md-table grid" id="cart_checkout">
-              
-                  <tbody>
+        <div class = "product_container2">
+          <div class="table-responsive product-list m-3">
+            <table class="table table-striped table-bordered w-100 d-block d-md-table grid" id="cart_checkout">
+              <tbody>
                   
-                  </tbody>
-                    </table>
-                    </div>
-                </div>
-              </div>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

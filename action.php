@@ -541,8 +541,134 @@ if (isset($_POST["Common"])) {
 				}
 			}
 	}
-	
-	
+}
+if (isset($_POST["Regular"])) {
+
+	if (isset($_SESSION["uid"])) {
+		//When user is logged in this query will execute
+		$query = "SELECT a.items_id,a.items_name,a.items_price,a.product_img1,b.id,b.qty FROM items a,cart b WHERE a.items_id=b.p_id AND b.user_id='$_SESSION[uid]'";
+		$query1 = "SELECT * FROM user_details 
+				   INNER JOIN table_province ON user_details.province = table_province.province_id
+				   INNER JOIN table_municipality ON user_details.city = table_municipality.municipality_id
+				   INNER JOIN table_region ON user_details.region = table_region.region_id WHERE user_id = '$_SESSION[uid]'";
+	}else{
+		//When user is not logged in this query will execute
+		$query = "SELECT a.items_id,a.items_name,a.items_price,a.product_img1,b.id,b.qty FROM items a,cart b WHERE a.items_id=b.p_id AND b.ip_add='$ip_add' AND b.user_id < 0";
+	}
+	$statement = $connect->prepare($query);
+	$statement->execute();
+	$result = $statement->fetchAll();
+
+	$statement1 = $connect->prepare($query1);
+	$statement1->execute();
+	$result1 = $statement1->fetchAll();
+	// print_r($result1);
+	if (isset($_POST["getCartItem"])) {
+		//display cart item in dropdown menu
+		if(! $result){
+			echo '<center><img width="40%" src="images/Icons/No_Item.png" alt="No_Item">
+			<h6>No Products Yet</h6></center>';
+		}elseif(isset($result)) {
+			$n=0;
+			foreach($result as $row) {
+				$n++;
+				$items_id = $row["items_id"];
+				$items_name = $row["items_name"];
+				$items_price = $row["items_price"];
+				$product_img1 = $row["product_img1"];
+				$cart_item_id = $row["id"];
+				$qty = $row["qty"];
+				echo '
+					<div class="row ">
+						<div class="col mb-1"><img class="shadow" width="80px" src="admin/product_images/'.$product_img1.'" /></div>
+						<div class="col-8 mt-3 text-truncate">'.$items_name.'<br>'.CURRENCY.''.$items_price.'</div>
+					</div>';
+			}
+		}
+			?>
+			<?php
+			exit();
+		
+	}
+
+	if (isset($_POST["userAddress"])) {
+		$n=0;
+		foreach($result1 as $row) {
+		  $n++;
+		  $first_name = $row["first_name"];
+		  $last_name = $row["last_name"];
+		  $user_contact = $row["user_contact"];
+		  $home_address = $row["home_address"];
+		  $city = $row["municipality_name"];
+		  $province = $row["province_name"];
+		  $region = $row["region_name"];
+		//   $user_address = '$home_address + '' + $city';
+
+		echo '<div class="p-4 border-top border-primary button-container shadow-sm blockquote pb-3 m-1" style="background: #f1f5f9;">
+			<h6 class="text-primary"><i class="fas fa-map-marker-alt"></i><strong> Delivery Address</strong>
+				<center>
+						<div class="form-group row d-flex">
+						<div class="col-sm-3 pt-3">
+						<input type="text" readonly class="form-control form-control-sm center " style="text-align: center; resize: vertical; background: #f1f5f9; border: none" placeholder="Full Name" value="'.$first_name.'" />
+						<span style="font-size: 12px"><strong>'.$user_contact.'</strong></span>
+						</div>
+						
+						<div class="col-sm-5 pt-2">
+						<textarea type="text" readonly class="form-control center" style=" text-align: center; resize: none; background: #f1f5f9; border: none" placeholder="Full Address">'.$home_address.', '.$city.', '.$province.', '.$region.'</textarea>
+						</div>
+						<div class="col-sm-2 pt-3">
+						<span style="font-size: 12px"><strong>Default</strong></span>
+						</div>
+						<div class="col-sm-2 pt-2">
+						<center><button type="button" name="deliver_add" id="delivery_add"
+						data-toggle="modal" data-target="#deliveryModal" class="btn btn-outline-secondary">Change</button></center>
+						</div>
+					</div>
+				</center>
+					</div>';
+	}
+	}
+if (isset($_POST["viewCart"])) {
+	echo '<tbody>
+	<h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong>
+	  <thead>
+		  <tr>
+			<th class="text-center">Image</th>
+			<th class="text-center">Product</th>
+			<th class="text-center">Price</th>
+			<th class="text-center">Quantity</th>
+			<th class="text-center">Sub Total</th>
+		  </tr>
+	  </thead>';
+		$n=0;
+		foreach($result as $row) {
+		  $n++;
+		  $items_id = $row["items_id"];
+		  $items_name = $row["items_name"];
+		  $items_price = $row["items_price"];
+		  $product_img1 = $row["product_img1"];
+		  $cart_item_id = $row["id"];
+		  $qty = $row["qty"];
+		  $subtotal = $row["qty"] * $row["items_price"];
+		  $total = $subtotal + $subtotal;
+		  echo '                            
+			<tr>
+			<td class="align-middle text-center"><img src="admin/product_images/'.$product_img1.'" width="150px"  alt="product"></td>
+			<td class="align-middle text-center">
+				<h6><strong>'.$items_name.' <br>ILAW Product</strong></h6>
+			</td>
+			<td class="align-middle text-center">'.CURRENCY.''.$items_price.'</td>
+			<td class="align-middle text-center" qty>'.$qty.'</td>
+			<td class="align-middle text-center" total>'.$subtotal.'</td>
+		</tr>'  ;
+	}
+	echo '
+	<h1 class="net_total></h1>
+	';
+	  }
+	  
+	  
+
 }
 
 //Remove Item From cart
