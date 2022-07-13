@@ -11,6 +11,7 @@
 /* width */
 ::-webkit-scrollbar {
     width: 5px; /* thickness of bar*/
+    height: 10px;
   }
   
   /* Track */

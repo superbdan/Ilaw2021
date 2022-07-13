@@ -225,36 +225,20 @@
         </div>
         <br>
         
-        <table class="table table-bordered w-100 d-sm-table grid">
-                  <tbody>
-                    
-                    <tr>
-                        <td class="align-middle text-end">
-                            <strong>Merchandise Subtotal: </strong> 
-                        </td>
-                        <td class="align-middle text-center">
-                        ₱2,085.00
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle text-end">
-                            <strong>Shipping Fee: </strong> 
-                        </td>
-                        <td class="align-middle text-center">
-                        ₱40.00
-                        </td>
-                    </tr>
-                    <tr class="h6">
-                        <td class="align-middle text-end bg-secondary text-white">
-                            <strong>Total Payment: </strong> 
-                        </td>
-                        <td class="align-middle text-center bg-secondary text-white">
-                        ₱2,125.00
-                        </td>
-                    </tr>
-                    </tbody>
-                    </table>
 
+        <div class="container border">
+            <div class="row">
+              <div class="col align-middle text-end border">Merchandise Subtotal:</div>
+              <div class="col border"><b>₱2,085.00</b></div>
+              <div class="w-100"></div>
+              <div class="col align-middle text-end border">Shipping Fee:</div>
+              <div class="col border"><b>₱40.00</b></div>
+              <div class="w-100"></div>
+              <div class="col align-middle text-end border bg-dark text-white">Total Payment:</div>
+              <div class="col border bg-dark text-white"><b>₱2,125.00</b></div>
+            </div> 
+        </div>
+   
         </div>
       </div>
   </div><br>
