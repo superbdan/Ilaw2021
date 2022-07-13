@@ -99,7 +99,7 @@ if(isset($_POST["page"])){
 	}
 }
 if(isset($_POST["getProduct"])){
-	$limit = 20;
+	$limit = 999999999999999;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;
@@ -493,7 +493,9 @@ if (isset($_POST["Common"])) {
                     // </a>
 					// 		</form>';
 					
-					echo '<input type="submit" style="float:center;" name="login_user_with_product" class="btn btn-info btn-lg" value="Ready to Checkout">
+					echo '<a type="button" href="product.php #products" class="btn btn-secondary icon-round mb-3">Update Cart</a>&nbsp;
+                    <a type="button" href="login.php #checkout" class="btn icon-round mb-3 text-white" style="background: #F7941D">Checkout
+                    </a>
 					</form>';
 
 				}else if(isset($_SESSION["uid"])){

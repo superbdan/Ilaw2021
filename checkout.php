@@ -125,56 +125,78 @@
     		</form>
     	</div>
     </div>
+      <div class="col-sm-12 p-3 mt-4 mb-4 border shadow-sm" style="background: #f1f5f9;"> 
+                  <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong></h6>
+          <div class='cart_header row text-center mt-3' style='display: flex;
+						align-items: center;'>
+						<div class='col-2'>
+							<div class='align-middle'><strong>Product Image</strong></div>
+						</div>
+						<div class='col-4'>
+							<div class='align-middle'><strong>Product Name</strong></div>
+						</div>
+						<div class='col-2'>
+							<div class='align-middle'><strong>Quantity</strong></div>
+						</div>
+						<div class='col-2'>
+							<div class='align-middle'><strong>Price</strong></div>
+						</div>
+						<div class='col-2'>
+							<div class='align-middle'><strong>Sub Total</strong></div>
+						</div>
+          </div>
+          
+          <!-- The Looping Order List -->
+          <div class="container-fluid"  style="overflow-x: auto;">
+          <hr>
+						<div class="row text-center" style="display: flex;
+						align-items: center;">
+									<div class="col">
+                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
+									</div>
+									<div class="col-4 text-truncate">LED Strip Light</div>
+									<div class="col-2">x3</div>
+									<div class="col-2 align-middle">₱250</div>
+									<div class="col-2 align-middle">₱7502</div>
+						</div>
+          <!-- End of The Looping Order List -->
 
-      <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
-        <div class="table-responsive product-list">
-        <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="productList">
-                  <tbody>
-                  <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong>
-                    <thead>
-								          <tr>
-                          <th class="text-center">Image</th>
-                          <th class="text-center">Product</th>
-                          <th class="text-center">Price</th>
-                          <th class="text-center">Quantity</th>
-                          <th class="text-center">Sub Total</th>
-                        </tr>
-							      </thead>
-                    <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr>
+          <!-- The Looping Order List -->
+          <hr>
+						<div class="row text-center" style="display: flex;
+						align-items: center;">
+									<div class="col">
+                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
+									</div>
+									<div class="col-4 text-truncate">LED Strip Light</div>
+									<div class="col-2">x3</div>
+									<div class="col-2">₱10000</div>
+									<div class="col-2">₱30000</div>
+						</div>
+          <!-- End of The Looping Order List -->
 
-                    <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr>
+          <!-- The Looping Order List -->
+          <hr>
+						<div class="row text-center" style="display: flex;
+						align-items: center;">
+									<div class="col">
+                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
+									</div>
+									<div class="col-4 text-truncate">LED Strip Light</div>
+									<div class="col-2">x3</div>
+									<div class="col-2">₱250</div>
+									<div class="col-2">₱7502</div>
+						</div>
+          <!-- End of The Looping Order List -->
+          </div>          
+          
+            
+                    
+      </div>
+      </center>
 
-                    <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-      </div>      
-  <div class="d-flex justify-content-around container-fluid">
-    <div class="col-sm-7 p-3 border button-container shadow-sm blockquote" style="background: #f1f5f9;"> <center>
+  <div class="d-flex justify-content-center">
+    <div class="col-10 p-3 mb-1 border shadow-sm" style="background: #f1f5f9;"> <center>
         <h6 class="text-primary"><i class="fas fa-envelope"></i><strong> Customer Note </strong>
               <div class="col-sm-12 pt-2">
               <textarea type="text" class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Write your message here..."></textarea>
@@ -193,11 +215,11 @@
               </center>
     </div> 
   </div>
-  <div class="border button-container shadow-sm  pb-4" style="background: #f8f8f8">
-    <div class="p-3 border button-container shadow-sm pb-0" style="background: #f1f5f9;">
+  <div class="border shadow-sm m-1 mt-3 pb-4" style="background: #f8f8f8">
+    <div class="p-3 border shadow-sm pb-0" style="background: #f1f5f9;">
     
             <nav aria-label="breadcrumb ">
-                <ul class="pt-1 pb-0 breadcrumb d-flex justify-content-center">
+                <ul class="pt-1 pb-0 breadcrumb d-flex justify-content-between">
                   
                     <h6 class="text-primary pt-1"><i class="fas fa-credit-card"></i><strong> Payment Method</strong></h6>
                     &nbsp; &nbsp; 
@@ -209,42 +231,30 @@
             </nav>
       </div>
       
-      <table class="table table-striped table-bordered w-100 d-sm-table grid">
       <center>
               <h6 class="pt-2" style="font-size: 12px"><strong>Note: Please proceed to pay on any online wallet below.</strong></h6>
               </center>
-              
-                  <tbody>
-                  
-                    <thead>
-								        <tr>
-                          <th class="text-center">Online Bank</th>
-                          <th class="text-center">Bank Details</th>
-                        </tr>
-							      </thead>
-                    <tr>
-                        <td class="align-middle text-center"><img src="images/Logo/gcash.png" width="80px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>Gcash</strong> <br>09567485622</h6>
-                        </td>
-                    </tr>
+              <div class="container border">
+                    <div class="row">
+                      <div class="col text-center border bg-primary text-white pt-2"><h5>Online Bank</h5></div>
+                      <div class="col border text-center bg-primary text-white pt-2"><h5>Bank Details</h5></div>
+                      <div class="w-100"></div>
 
-                    <tr>
-                      <td class="align-middle text-center"><img src="images/Logo/coins.png" width="80px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><h6><strong>Coins.Ph</strong> <br>09567485622</h6></h6>
-                        </td>
-                    </tr>
+                      <div class="col align-middle text-center border pt-3 pb-3"><b><img src="images/Logo/gcash.png" width="80px" class="shadow" alt="product"></b></div>
+                      <div class="col text-center border pt-4">Gcash<br><b>09567485622</b></div>
+                      <div class="w-100"></div>
 
-                    <tr>
-                      <td class="align-middle text-center"><img src="images/Logo/paymaya.png" width="80px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><h6><strong>PayMaya</strong> <br>09567485622</h6></h6>
-                        </td>
-                    </tr>
-                   
-                    </tbody>
-      </table>
+                      <div class="col align-middle text-center border pt-3 pb-3"><b><img src="images/Logo/coins.png" width="80px" class="shadow"  alt="product"></b></div>
+                      <div class="col text-center border pt-4">Coins.Ph<br><b>09567485622</b></div>
+                      <div class="w-100"></div>
+
+                      <div class="col align-middle text-center border pt-3 pb-3"><b><img src="images/Logo/paymaya.png" width="80px" class="shadow"  alt="product"></b></div>
+                      <div class="col text-center border pt-4">Paymaya<br><b>09567485622</b></div>
+                      <div class="w-100"></div>
+
+                    </div> 
+                    </div>  
+                  <br>
             <div class="container d-flex flex-wrap justify-content-center" >
 
                 <div class="col-md-6 align-center">
@@ -276,47 +286,29 @@
                             <input type="text" class="form-control" required>
                             
                     </div>
-                    <center><h6 class="pt-4" style="font-size: 12px"><strong>Note: Bank Name Must be accurate and similar to the screenshot.</strong></h6></center>
+                    <center><h6 class="pt-4" style="font-size: 12px"><strong>Note: Bank Name Must be accurate and similar to the screenshot.</strong></h6>
                     <br>
-              <table class="table table-bordered w-100 d-sm-table grid">
-                  <tbody>
-                  
-                    <tr>
-                        <td class="align-middle text-center">
-                            <strong>Merchandise Subtotal: </strong> 
-                        </td>
-                        <td class="align-middle text-center">
-                        ₱2,085.00
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle text-center">
-                            <strong>Shipping Fee: </strong> 
-                        </td>
-                        <td class="align-middle text-center">
-                        ₱40.00
-                        </td>
-                    </tr>
-                    <tr class="h5">
-                        <td class="align-middle text-center bg-secondary text-white">
-                            <strong>Total Payment: </strong> 
-                        </td>
-                        <td class="align-middle text-center bg-secondary text-white">
-                        ₱2,125.00
-                        </td>
-                    </tr>
-                    </tbody>
-                    </table>
+                    <div class="container border">
+                    <div class="row">
+                      <div class="col align-middle text-end border p-2">Merchandise Subtotal:</div>
+                      <div class="col border p-2"><b>₱2,085.00</b></div>
+                      <div class="w-100"></div>
+                      <div class="col align-middle text-end border p-2">Shipping Fee:</div>
+                      <div class="col border p-2"><b>₱40.00</b></div>
+                      <div class="w-100"></div>
+                      <div class="col align-middle text-end border bg-dark text-white p-2">Total Payment:</div>
+                      <div class="col border bg-dark text-white p-2"><b>₱2,125.00</b></div>
+                    </div> 
+                    </div>
                     <br>
-                    <center>
-                    <button type="button" class="btn icon-round mb-3 text-white" style="background: #F7941D"><i class="fas fa-shopping-cart"></i>  Place Order</button></center>
+                    <button type="button" class="btn icon-round mb-3 text-white shadow" style="background: #F7941D"><i class="fas fa-shopping-cart"></i>  Place Order</button></center>
                     </div>
                 </div>
-
             </div>
           </div>
     </div>
     </form>
+
   </section>
     <?php
           include("footer/footer.php")
