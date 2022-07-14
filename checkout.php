@@ -83,18 +83,12 @@
         </div>
       </div>
 
-<<<<<<< HEAD
-        <div id="deliveryModal" class="modal fade ">
-    	<div class="modal-dialog modal-lg ">
-=======
       <div id="deliveryModal" class="modal fade ">
     	<div class="modal-dialog ">
->>>>>>> bc48002 (adding checkout form)
     		<form method="post" id="category_form">
     			<div class="modal-content bd-example-modal-lg">
           <div class="modal-header">
 	        	<h5 class="modal-title"><b>Delivery Address</b></h5>
-	        	<a type="button" data-dismiss="modal" aria-label="Close">
 	          		<span aria-hidden="true"><i class="fas fa-times"></i></span>
           </a>
 	      	</div>
@@ -152,28 +146,6 @@
 						</div>
           <!-- End of The Looping Order List -->
 
-<<<<<<< HEAD
-      <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
-        <div class="table-responsive product-list">
-        <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="cart_view">
-         
-                    <!-- <tr>
-                        <td class="align-middle text-center"><img src="admin/images/Profiles/tarred.jpeg" width="150px"  alt="product"></td>
-                        <td class="align-middle text-center">
-                            <h6><strong>LED Strip Light LPL 3 Color 6w LPL6W3 <br>ILAW Product</strong></h6>
-                        </td>
-                        <td class="align-middle text-center">₱450</td>
-                        <td class="align-middle text-center">2x</td>
-                        <td class="align-middle text-center">₱900</td>
-                    </tr> -->
-
-          </tbody>
-         </table>
-        </div>
-      </div>      
-  <div class="d-flex justify-content-around container-fluid">
-    <div class="col-sm-7 p-3 border button-container shadow-sm blockquote" style="background: #f1f5f9;"> <center>
-=======
           <!-- The Looping Order List -->
           <hr>
 						<div class="row text-center" style="display: flex;
@@ -210,7 +182,6 @@
 
   <div class="d-flex justify-content-center">
     <div class="col-10 p-3 mb-1 border shadow-sm" style="background: #f1f5f9;"> <center>
->>>>>>> 5884403d80d30d3501abd3ab9c66a01ec628bf4e
         <h6 class="text-primary"><i class="fas fa-envelope"></i><strong> Customer Note </strong>
               <div class="col-sm-12 pt-2">
               <textarea type="text" class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Write your message here..."></textarea>
