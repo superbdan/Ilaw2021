@@ -83,7 +83,6 @@
         </div>
       </div>
 
-<<<<<<< HEAD
         <div id="deliveryModal" class="modal fade ">
     	<div class="modal-dialog modal-lg ">
 =======
@@ -136,7 +135,7 @@
 							<div class='align-middle'><strong>Sub Total</strong></div>
 						</div>
           </div>
-          
+
           <!-- The Looping Order List -->
           <div class="container-fluid"  style="overflow-x: auto;">
           <hr>
@@ -152,7 +151,6 @@
 						</div>
           <!-- End of The Looping Order List -->
 
-<<<<<<< HEAD
       <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
         <div class="table-responsive product-list">
         <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="cart_view">
@@ -173,44 +171,6 @@
       </div>      
   <div class="d-flex justify-content-around container-fluid">
     <div class="col-sm-7 p-3 border button-container shadow-sm blockquote" style="background: #f1f5f9;"> <center>
-=======
-          <!-- The Looping Order List -->
-          <hr>
-						<div class="row text-center" style="display: flex;
-						align-items: center;">
-									<div class="col">
-                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
-									</div>
-									<div class="col-4 text-truncate">LED Strip Light</div>
-									<div class="col-2">x3</div>
-									<div class="col-2">₱10000</div>
-									<div class="col-2">₱30000</div>
-						</div>
-          <!-- End of The Looping Order List -->
-
-          <!-- The Looping Order List -->
-          <hr>
-						<div class="row text-center" style="display: flex;
-						align-items: center;">
-									<div class="col">
-                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
-									</div>
-									<div class="col-4 text-truncate">LED Strip Light</div>
-									<div class="col-2">x3</div>
-									<div class="col-2">₱250</div>
-									<div class="col-2">₱7502</div>
-						</div>
-          <!-- End of The Looping Order List -->
-          </div>          
-          
-            
-                    
-      </div>
-      </center>
-
-  <div class="d-flex justify-content-center">
-    <div class="col-10 p-3 mb-1 border shadow-sm" style="background: #f1f5f9;"> <center>
->>>>>>> 5884403d80d30d3501abd3ab9c66a01ec628bf4e
         <h6 class="text-primary"><i class="fas fa-envelope"></i><strong> Customer Note </strong>
               <div class="col-sm-12 pt-2">
               <textarea type="text" class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Write your message here..."></textarea>
@@ -253,7 +213,7 @@
                       <div class="col text-center border bg-primary text-white pt-2"><h5>Online Bank</h5></div>
                       <div class="col border text-center bg-primary text-white pt-2"><h5>Bank Details</h5></div>
                       <div class="w-100"></div>
-
+              
                       <div class="col align-middle text-center border pt-3 pb-3"><b><img src="images/Logo/gcash.png" width="80px" class="shadow" alt="product"></b></div>
                       <div class="col text-center border pt-4">Gcash<br><b>09567485622</b></div>
                       <div class="w-100"></div>
@@ -265,7 +225,7 @@
                       <div class="col align-middle text-center border pt-3 pb-3"><b><img src="images/Logo/paymaya.png" width="80px" class="shadow"  alt="product"></b></div>
                       <div class="col text-center border pt-4">Paymaya<br><b>09567485622</b></div>
                       <div class="w-100"></div>
-
+                   
                     </div> 
                     </div>  
                   <br>
