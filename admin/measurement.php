@@ -52,6 +52,8 @@ include('sidebar.php');
     			<div class="modal-content">
     				<div class="modal-header">
 						<h4 class="modal-title"><i class="fa fa-plus"></i> Add measurement</h4>
+						<a type="button" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true" class="h5 pt-3" style="cursor: pointer"><i class="fa fa-times fa-lg"></i></span></a>
     				</div>
     				<div class="modal-body">
     					<label>Enter Measurement Name</label>
@@ -61,7 +63,7 @@ include('sidebar.php');
     					<input type="hidden" name="measurement_id" id="measurement_id"/>
     					<input type="hidden" name="btn_action" id="btn_action"/>
     					<input type="submit" name="action" id="action" class="btn btn-info" value="Add" />
-    					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    					<input type="reset" name="action" id="action" class="btn btn-danger" value="Clear" />
     				</div>
     			</div>
     		</form>

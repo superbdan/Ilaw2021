@@ -25,10 +25,10 @@ include('sidebar.php');
                                         <span class="text-muted mt-0 bio-request">Administrator</span>
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-12 px-5 text-right pt-4 bio-comment">
-                                        <button type="button" class="btn btn-info ml-3 p-2" data-toggle="tooltip" data-placement="bottom" title="Edit Profile">
-                                            <i class="fa fa-pencil fa-lg"></i>
                                         </button>
-                                        <button type="button" class="btn btn-theme  p-2" data-toggle="tooltip" data-placement="bottom" title="Save Changes"><i class="fa fa-save fa-lg"></i></button>
+                                        <button type="button" name="edit" id="profile_button" data-toggle="modal" data-target="#profileModal" class="btn btn-info"><i class="fa fa-pencil"></i> Edit Profile</button>   		
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,39 @@ include('sidebar.php');
 
                     </div>
                 </div>
-                
+
+    <div id="profileModal" class="modal fade">
+    	<div class="modal-dialog">
+    		<form method="post" id="measurement_form">
+    			<div class="modal-content">
+    				<div class="modal-header">
+						<h4 class="modal-title"><i class="fa fa-pencil"></i> Edit Profile</h4>
+                        <a type="button" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true" class="h5 pt-3" style="cursor: pointer"><i class="fa fa-times fa-lg"></i></span></a>
+    				</div>
+    				<div class="modal-body">
+    					<label>First Name:</label>
+						<input type="text" name="profile_name" id="profile_name" class="form-control" required /><br>
+                        <label>Last Name:</label>
+						<input type="text" name="profile_name" id="profile_name" class="form-control" required /><br>
+                        <label>Email: </label>
+						<input type="text" name="profile_name" id="profile_name" class="form-control" required /><br>
+                        <label>Address:</label>
+						<input type="text" name="profile_name" id="profile_name" class="form-control" required /><br>
+                        <label>Position: </label>
+						<input type="text" name="profile_name" id="profile_name" class="form-control" required /><br>
+                        <label>Description: </label>
+						<textarea class="form-control" style="resize: none;" name="" id="" rows="5" placeholder="Write a message" require></textarea>
+                        
+    				</div>
+    				<div class="modal-footer">
+    					<input type="submit" name="action" id="action" class="btn btn-info" value="Update" />
+                        <input type="reset" name="action" id="action" class="btn btn-danger" value="Clear" />
+    				</div>
+    			</div>
+    		</form>
+    	</div>
+    </div>
                            
                             <div class="tab-pane p-4" id="custom-profile" role="tabpanel" aria-labelledby="nav-profile">
                                     <div class="table-responsive mb-4">
