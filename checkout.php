@@ -72,7 +72,13 @@
 
                   <li><a type="button" class="btn btn-secondary pb-2" data-toggle="tooltip" data-placement="bottom" title="Back to Shopping Cart" href="cart.php #cart"><i class="fas fa-arrow-left"></i></a>
                   
-                  <a tabindex="0" class="btn btn-primary pb-2" role="button" data-toggle="popover" data-trigger="focus" title="Content Guide" data-content="The Dashboard serve as the summary review of the overall output of the table for easy monitoring."><i class="fa fa-info"></i></a></li>
+                  <a tabindex="0" class="btn btn-primary pb-2" role="button" data-toggle="popover" data-trigger="focus" title="Content Guide" data-content="The Shopping Cart Page will display all the customer's information, as well as the orders to be confirmed. Make sure to recheck all details before sending to us."><i class="fa fa-info"></i></a></li>
+
+                  <script>
+                    $(function () {
+                      $('[data-toggle="popover"]').popover()
+                    })
+                  </script>
                 </ol>
             </nav>
         </div>
@@ -83,26 +89,28 @@
         </div>
       </div>
 
+<<<<<<< HEAD
         <div id="deliveryModal" class="modal fade ">
     	<div class="modal-dialog modal-lg ">
 =======
+=======
+>>>>>>> 38982105aa1a9db2066f8b3a46c4d0ce8e18087e
       <div id="deliveryModal" class="modal fade ">
-    	<div class="modal-dialog ">
->>>>>>> bc48002 (adding checkout form)
+    	<div class="modal-dialog modal-lg ">
     		<form method="post" id="category_form">
     			<div class="modal-content bd-example-modal-lg">
           <div class="modal-header">
-	        	<h5 class="modal-title"><b>Delivery Address</b></h5>
-	        	<a type="button" data-dismiss="modal" aria-label="Close">
+	        	<h5 class="modal-title text-primary"><b><i class="fas fa-map-marker-alt"></i> Delivery Address</b></h5>
+            <a type="button" data-dismiss="modal" aria-label="Close">
 	          		<span aria-hidden="true"><i class="fas fa-times"></i></span>
-          </a>
+                </a>
 	      	</div>
     				<div class="modal-body text-center">
-    					Default Address:
+    					<b>Default Address:</b>
               <br>
               159 General Malvar Street San Vicente Biñan City Laguna
             <hr>
-            <label class="mb-2">Input New Address:</label>
+            <label class="mb-2"><b>Input New Address:</b></label>
             <input type="text" name="category_name" id="category_name" class="form-control" required />
     				</div>
             <center>
@@ -115,8 +123,9 @@
     		</form>
     	</div>
     </div>
-      <div class="col-sm-12 p-3 mt-4 mb-4 border shadow-sm" style="background: #f1f5f9;"> 
-                  <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong></h6>
+    
+      <div class="container col-sm-12 p-3 mb-4 border shadow-sm text-start" style="background: #f1f5f9;">
+      <h6 class="text-primary"><i class="fas fa-cubes"></i><strong> Product Preview </strong></h6>
           <div class='cart_header row text-center mt-3' style='display: flex;
 						align-items: center;'>
 						<div class='col-2'>
@@ -151,6 +160,7 @@
 						</div>
           <!-- End of The Looping Order List -->
 
+<<<<<<< HEAD
       <div class="col-sm-12 p-3 mt-4 mb-3 border button-container shadow-sm " style="background: #f1f5f9;"> 
         <div class="table-responsive product-list">
         <table class="table table-striped table-bordered w-100 d-block d-md-table grid text-nowrap" id="cart_view">
@@ -171,6 +181,41 @@
       </div>      
   <div class="d-flex justify-content-around container-fluid">
     <div class="col-sm-7 p-3 border button-container shadow-sm blockquote" style="background: #f1f5f9;"> <center>
+=======
+          <!-- The Looping Order List -->
+          <hr>
+						<div class="row text-center" style="display: flex;
+						align-items: center;">
+									<div class="col-2">
+                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
+									</div>
+									<div class="col-4 text-truncate">LED Strip Light</div>
+									<div class="col-2">x3</div>
+									<div class="col-2">₱10000</div>
+									<div class="col-2">₱30000</div>
+						</div>
+          <!-- End of The Looping Order List -->
+
+          <!-- The Looping Order List -->
+          <hr>
+						<div class="row text-center" style="display: flex;
+						align-items: center;">
+									<div class="col">
+                  <img src="images/Products/1.jpg" width="100%" class="shadow"  alt="product">
+									</div>
+									<div class="col-4 text-truncate">LED Strip Light</div>
+									<div class="col-2">x3</div>
+									<div class="col-2">₱250</div>
+									<div class="col-2">₱7502</div>
+						</div>
+          <!-- End of The Looping Order List -->
+          </div>
+
+      </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-10 p-3 mb-1 border shadow-sm" style="background: #f1f5f9;"> <center>
+>>>>>>> 38982105aa1a9db2066f8b3a46c4d0ce8e18087e
         <h6 class="text-primary"><i class="fas fa-envelope"></i><strong> Customer Note </strong>
               <div class="col-sm-12 pt-2">
               <textarea type="text" class="form-control" style="resize: none; background: #f9f9f9;" placeholder="Write your message here..."></textarea>
@@ -189,7 +234,7 @@
               </center>
     </div> 
   </div>
-  <div class="border shadow-sm m-1 mt-3 pb-4" style="background: #f8f8f8">
+  <div class="border shadow-sm m-4 mt-3 pb-4" style="background: #f8f8f8">
     <div class="p-3 border shadow-sm pb-0" style="background: #f1f5f9;">
     
             <nav aria-label="breadcrumb ">
@@ -282,6 +327,7 @@
           </div>
     </div>
     </form>
+    <br>
 
   </section>
     <?php

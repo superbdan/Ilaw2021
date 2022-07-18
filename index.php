@@ -423,13 +423,12 @@
           <form method="post"  action="">
           <input class="shadow border"  type="text" placeholder="First Name" require>
           <input class="shadow border"  type="text" placeholder="Last Name" require>
-          <input class="shadow border"  type="text" placeholder="Email" require>
+          <input class="shadow border"  type="email" placeholder="Email" require>
           <input class="shadow border"  type="number" placeholder="Contact #" require>
           <textarea class="shadow border" name="" id="" rows="5" placeholder="Write a message" require></textarea>
-          <div class="form-group text-center mt-4">
-              <button type="submit" name="login" value="Login" class="btn btn-primary text-white" id="alertify_success_top" required>Submit</button>
-              <button type="reset" class="btn btn-danger">Clear</button>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="form-group  mt-4">
+              <button type="submit" name="login" value="Login" class="btn btn-primary text-white shadow border" id="alertify_success_top" required>Submit</button>
+              <button type="reset" class="btn btn-danger shadow border">Clear</button>
             </div>
             <br>
         </div>

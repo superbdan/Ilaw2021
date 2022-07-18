@@ -359,7 +359,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 if (isset($_POST["count_item"])) {
 	//When user is logged in then we will count number of item in cart by using user session id
 	if (isset($_SESSION["uid"])) {
-		$query = "SELECT COUNT(*) AS count_item FROM cart WHERE user_id = $_SESSION[uid]";
+		$query = "SELECT COUNT(*) AS count_item FROM cart WHERE user_id = '$_SESSION[uid]'";
 	}else{
 		//When user is not logged in then we will count number of item in cart by using users unique ip address
 		$query = "SELECT COUNT(*) AS count_item FROM cart WHERE ip_add = '$ip_add' AND user_id < 0";
@@ -611,7 +611,7 @@ if (isset($_POST["Regular"])) {
 				<center>
 						<div class="form-group row d-flex">
 						<div class="col-sm-3 pt-3">
-						<input type="text" readonly class="form-control form-control-sm center " style="text-align: center; resize: vertical; background: #f1f5f9; border: none" placeholder="Full Name" value="'.$first_name.'" />
+						<input type="text" readonly class="form-control form-control-sm center " style="text-align: center; resize: vertical; background: #f1f5f9; border: none" placeholder="Full Name" value="'.$first_name.' '.$last_name.'" />
 						<span style="font-size: 12px"><strong>'.$user_contact.'</strong></span>
 						</div>
 						
