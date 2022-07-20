@@ -16,7 +16,7 @@ include('../function.php');
                     <ul class="nav ml-auto add_product">
                         <li><a type="button" class="print_table btn btn-secondary p-2" data-toggle="tooltip" data-placement="bottom" title="Print Table"><i class="fa fa-print fa-lg"></i></a></li>
                         <li><a type="button" id="add_button" name="add" data-toggle="modal" data-target="#itemsModal"  class="btn btn-info ml-3 p-1"><i class="fa fa-plus-square"></i> Add New Product</a></li>
-                        <li><a type="button" class="btn btn-info ml-3 p-1"><i class="fa fa-plus-square"></i> Stock Control</a></li>
+                        <li><a type="button" id="add_button" name="add" data-toggle="modal" data-target="#stockModal" class="btn btn-info ml-3 p-1"><i class="fa fa-plus-square"></i> Stock Control</a></li>
                     </ul>
                 </ol>
             </nav>
@@ -114,15 +114,73 @@ include('../function.php');
 							
 							<div class="form-group">
 							<label><b>1st Product Image:</b></label>
-							<input type="file" id="product_img1" name="product_img1" accept= ".jpg, .png" class="form-control" style="cursor: pointer;">
+							<input type="file" id="product_img1" name="product_img1" accept= ".jpg, .png" class="form-control" style="cursor: pointer;" required>
 							</div>
 							<img src="../admin/product_images/default-avatar.jpg" width="0" id="img1_db" class="fade"/> 
 
 							<div class="form-group">
 							<label><b>2nd Product Image:</b></label>
-							<input type="file" id="product_img2" name="product_img2" accept= ".jpg, .png" class="form-control" style="cursor: pointer;" >
+							<input type="file" id="product_img2" name="product_img2" accept= ".jpg, .png" class="form-control" style="cursor: pointer;" required>
 							</div>
 							<img src="../admin/product_images/default-avatar.jpg" width="0" id="img2_db" class="fade"/> 
+
+						</div>
+    				
+    				<div class="modal-footer">
+    					<input type="hidden" name="items_id" id="items_id"/>
+    					<input type="hidden" name="btn_action" id="btn_action"/>
+    					<input type="submit" name="action" id="action" class="btn btn-info" value="Add" />
+    					<input type="reset" name="action" id="action" class="btn btn-danger" value="Clear" />
+    				</div>
+					
+    			</div>
+    		</form>
+    	</div>
+    </div>
+
+	<div id="stockModal" class="modal fade">
+    	<div class="modal-dialog">
+    		<form method="post" id="items_form">
+    			<div class="modal-content">
+    				<div class="modal-header">
+						<h4 class="modal-title"><i class="fa fa-plus"></i> Add Stock</h4>
+						<a type="button" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true" class="h5 pt-3" style="cursor: pointer"><i class="fa fa-times fa-lg"></i></span></a>
+    				</div>
+    					<div class="modal-body">
+						
+							<div class="form-group">
+                                <label><b>Item Name:</b></label>
+                                <select style="cursor:pointer"  name="supplier_id" id="supplier_id" class="form-control" required>
+                                    <option value="">--- Select Item Name ---</option>
+                                    <?php /*echo fill_suppliers_list($connect);*/?>
+                                </select>
+                            </div>
+							<div class="form-group">
+                                <label><b>Item Model:</b></label>
+                                <select style="cursor:pointer"  name="measurement_id" id="measurement_id" class="form-control" required>
+                                    <option value="">--- Select Item Model ---</option>
+                                    <?php /*echo fill_measurement_list($connect);*/?>
+                                </select>
+                            </div>
+							
+							<div class="form-group">
+							<label><b>In Stocks:</b></label>
+							<input type="text" name="items_stocks" id="items_stocks" class="form-control" required />
+							</div>
+							<div class="form-group">
+							<label><b>Low Stock:</b></label>
+							<input type="text" name="items_low" id="items_low" class="form-control" required />
+							</div>
+
+							<div class="form-group">
+							<label><b>Cost:</b></label>
+							<input type="text" name="items_cost" id="items_cost" class="form-control" required />
+							</div>
+    						<div class="form-group">
+							<label><b>Selling Price:</b></label>
+							<input type="text" name="items_price" id="items_price" class="form-control" required />
+							</div>
 
 						</div>
     				
