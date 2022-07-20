@@ -175,10 +175,23 @@ require "database_connection.php";
           <div>
             <div class="item_grid" id="get_product" >
               <!--All Products Loops in the Action.php-->
+              
             </div>
+        <!-- store bottom filter -->
+        <div class="container shadow border mt-2 pt-3 store-filter clearfix" style="background: #fff">
+          <span class="store-qty">Showing 20-100 products</span>
+          <ul class="store-pagination" id="pageno">
+            <li ><a class="active" href="#aside">1</a></li>
+            <li ><a class="" href="#aside">2</a></li>
+            <li ><a class="" href="#aside">3</a></li>
+            <li ><a class="" href="#aside">4</a></li>
+            <li ><a class="" href="#aside">5</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+          </ul>
+        </div>
+        <!-- /store bottom filter -->
           </div>
 	<!--End of Main Content-->
-        <!--Main Content-->
     </main>
     
 

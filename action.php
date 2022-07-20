@@ -99,7 +99,7 @@ if(isset($_POST["page"])){
 	}
 }
 if(isset($_POST["getProduct"])){
-	$limit = 999999999999999;
+	$limit = 999999999999;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;
@@ -166,6 +166,7 @@ if(isset($_POST["getProduct"])){
         	</li>
 			";
 	}
+	
 }
 if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isset($_POST["search"])){
 	/*if(isset($_POST["get_seleted_Category"])){
