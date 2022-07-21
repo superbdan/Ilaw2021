@@ -278,7 +278,6 @@ $img = $user['profile'];
                         </div>
                     </div>
                 </div>
-                <br>
                 <div class="line_transactions">
                     <h3>My Transactions</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero doloremque, odio, non sapiente nam officia laboriosam in quibusdam nulla nisi architecto possimus illum asperiores laborum, exercitationem unde debitis voluptas nostrum.</p>

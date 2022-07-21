@@ -21,7 +21,9 @@
     <link href="css/owl_carousel.css" rel="stylesheet" />
     <link href="css/listandgrid.css" rel="stylesheet" />
     <link href="css/style_e-commerce.css" rel="stylesheet" />
+    <link href="css/upload.css" rel="stylesheet" />
     <link href="css/orderstatus.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- UniIcon CDN Link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
@@ -142,7 +144,9 @@
           <div class="col-3 text-dark mt-2">
             <div class="row">
             <div class="btn btn-light short-div">₱160</div>
-              <button type="button" onclick="window.location='reviews.php';"class="btn btn-primary shadow" ><i class="fas fa-star"></i> Rate</button>
+              <button type="button" name="add_review" id="add_review" class="btn btn-primary shadow" ><i class="fas fa-star"></i> Rate</button>
+              <div class="col-sm-4 text-center">
+    				</div>
             </div>
           </div>
         </div>
@@ -242,11 +246,263 @@
         </div>
       </div>
   </div><br>
+  <div id="review_modal" class="modal fade popups "  role="dialog" style="overflow:scroll;">
+  	<div class="modal-dialog modal-lg" role="document">
+    	<div class="modal-content">
+	      	<div class="modal-header">
+	        	<h5 class="modal-title"><b>Review Any Product and Shop Services</b></h5>
+	        	<a type="button" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </a>
+	      	</div>
+	      	<div class="modal-body ">
+	      		<h4 class="text-center mt-2 mb-4 " >
+	        		<i class="fas fa-star star-light submit_star mr-1" id="submit_star_1" data-rating="1" role="button"></i>
+                    <i class="fas fa-star star-light submit_star mr-1" id="submit_star_2" data-rating="2" role="button"></i>
+                    <i class="fas fa-star star-light submit_star mr-1" id="submit_star_3" data-rating="3" role="button"></i>
+                    <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4" role="button"></i>
+                    <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5" role="button"></i>
+	        	</h4>
+	        	<div class="form-group">
+	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" required/>
+	        	</div>
+            <br>
+            <div class="form-group">
+	        		<input type="text" name="title_review" id="title_review" class="form-control" placeholder="Enter Title" required/>
+	        </div>
+            <br>
+	        	<div class="form-group">
+	        		<textarea name="user_review" id="user_review" class="form-control" style="resize: none; height:100px" placeholder="Type Review Here" required></textarea>
+	        	</div>
+            
+            <!-- Upload Image and Video -->
+            <div class="wrap-upload-buttons">
+            <div class="container">
+                <br>
+                <h5>Picture/Video Upload (Optional)</h5>
+                <center><div class = "upload_box">
+                <ul id="media-list" class="clearfix" role="button">
+                
+                        <li class="myupload">
+                            <center><span><i class="fas fa-image fa-lg" aria-hidden="true"></i><input type="file" click-type="type2" id="picupload" class="picupload" multiple role="button"></span></center>
+                        </li>
+                </ul>
+                </div>
+                <ul id="media-list" class="clearfix">
+                        <li class="myupload">
+                            <center><span ><i class="fas fa-video fa-lg" aria-hidden="true" ></i><input type="file" click-type="type2" id="vidupload" class="vidupload" multiple accept="video/*" role="button"></span></center>
+                        </li>
+                </ul>
+            </div>
+            </div>
+
+	        	<div class="form-group text-center mt-4">
+	        		<button type="button" class="btn btn-primary" id="save_review"><i class="fas fa-star"></i> Submit Review</button>
+	        	</div>
+	      	</div>
+    	</div>
+  	</div>
+</div>
 </section>
     <?php
           include("footer/footer.php")
     ?>
-    
+    <script>
+$(document).ready(function(){
+
+	var rating_data = 0;
+
+    $('#add_review').click(function(){
+
+        $('#review_modal').modal('show');
+
+    });
+
+    $(document).on('mouseenter', '.submit_star', function(){
+
+        var rating = $(this).data('rating');
+
+        reset_background();
+
+        for(var count = 1; count <= rating; count++)
+        {
+
+            $('#submit_star_'+count).addClass('text-warning');
+
+        }
+
+    });
+
+    function reset_background()
+    {
+        for(var count = 1; count <= 5; count++)
+        {
+
+            $('#submit_star_'+count).addClass('star-light');
+
+            $('#submit_star_'+count).removeClass('text-warning');
+
+        }
+    }
+
+    $(document).on('mouseleave', '.submit_star', function(){
+
+        reset_background();
+
+        for(var count = 1; count <= rating_data; count++)
+        {
+
+            $('#submit_star_'+count).removeClass('star-light');
+
+            $('#submit_star_'+count).addClass('text-warning');
+        }
+
+    });
+
+    $(document).on('click', '.submit_star', function(){
+
+        rating_data = $(this).data('rating');
+
+    });
+
+    $('#save_review').click(function(){
+
+        var user_name = $('#user_name').val();
+
+        var user_review = $('#user_review').val();
+
+        var title_review = $('#title_review').val();
+        if(user_name == '' || user_review == '')
+        {
+            alert("Please Fill Both Field");
+            return false;
+        }
+        else
+        {
+            $.ajax({
+                url:"submit_rating.php",
+                method:"POST",
+                data:{rating_data:rating_data, user_name:user_name,title_review:title_review, user_review:user_review},
+                success:function(data)
+                {
+                    $('#review_modal').modal('hide');
+
+                    load_rating_data();
+
+                    alert(data);
+                }
+            })
+        }
+
+    });
+
+    load_rating_data();
+
+    function load_rating_data()
+    {
+        $.ajax({
+            url:"submit_rating.php",
+            method:"POST",
+            data:{action:'load_data'},
+            dataType:"JSON",
+            success:function(data)
+            {
+                $('#average_rating').text(data.average_rating);
+                $('#total_review').text(data.total_review);
+
+                var count_star = 0;
+
+                $('.main_star').each(function(){
+                    count_star++;
+                    if(Math.ceil(data.average_rating) >= count_star)
+                    {
+                        $(this).addClass('text-warning');
+                        $(this).addClass('star-light');
+                    }
+                });
+
+                $('#total_five_star_review').text(data.five_star_review);
+
+                $('#total_four_star_review').text(data.four_star_review);
+
+                $('#total_three_star_review').text(data.three_star_review);
+
+                $('#total_two_star_review').text(data.two_star_review);
+
+                $('#total_one_star_review').text(data.one_star_review);
+
+                $('#five_star_progress').css('width', (data.five_star_review/data.total_review) * 100 + '%');
+
+                $('#four_star_progress').css('width', (data.four_star_review/data.total_review) * 100 + '%');
+
+                $('#three_star_progress').css('width', (data.three_star_review/data.total_review) * 100 + '%');
+
+                $('#two_star_progress').css('width', (data.two_star_review/data.total_review) * 100 + '%');
+
+                $('#one_star_progress').css('width', (data.one_star_review/data.total_review) * 100 + '%');
+
+                if(data.review_data.length > 0)
+                {
+                    var html = '';
+
+                    for(var count = 0; count < data.review_data.length; count++)
+                    {
+                        html += '<div class="d-flex mb-3">';
+
+                        html += '<div class="rounded bg-white text-dark p-3 "><img src="admin/images/Profiles/Patrick.jpg" alt="Admin_Profile" width="70px" class="rounded-circle" /><h3 class="text-center">'+data.review_data[count].user_name.charAt(0)+'</h3></div>';
+
+                        html += '<div class="col-sm-11">';
+
+                        html += '<div class="card">';
+
+                        html += '<div class="card-header"><b>'+data.review_data[count].user_name+'</b></div>';
+
+                        html += '<div class="card-body">';
+
+                        for(var star = 1; star <= 5; star++)
+                        {
+                            var class_name = '';
+
+                            if(data.review_data[count].rating >= star)
+                            {
+                                class_name = 'text-warning';
+                            }
+                            else
+                            {
+                                class_name = 'star-light';
+                            }
+
+                            html += '<i class="fas fa-star '+class_name+' mr-1"></i>';
+                        }
+
+                        html += '<br />';
+
+                        html += '<div><b>'+data.review_data[count].title_review+'</b></div>';
+
+                        html += data.review_data[count].user_review;
+
+                        html += '</div>';
+
+                        
+
+                        html += '<div class="card-footer text-right">On '+data.review_data[count].datetime+'</div>';
+
+                        html += '</div>';
+
+                        html += '</div>';
+
+                        html += '</div>';
+                    }
+
+                    $('#review_content').html(html);
+                }
+            }
+        })
+    }
+
+});
+
+</script>
     <script src="js/functions.js" type="text/javascript"></script>
     <script src="js/orderstatus.js" type="text/javascript"></script>
     <!--Bootstrap-->
@@ -255,10 +511,7 @@
      <!--Progressbar JS-->
      
      <script src="admin/assets/js/progressbar.min.js"></script>
-     <!--Paper bootstrap wizard-->
-    <script src="admin/assets/js/jquery.bootstrap.wizard.js"></script>
-    <script src="admin/assets/js/paper-bootstrap-wizard.js"></script>
-    <script src="admin/assets/js/jquery.validate.min.js"></script>
+     
     <!-- For Cart-->
     <script src="linkscript/main.js"></script>
     <!--Custom Js Script-->

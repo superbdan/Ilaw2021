@@ -42,6 +42,7 @@ if(isset($_POST['btn_action']))
 
 
 		$items_name = $_POST["items_name"];
+		$item_descript = $_POST["item_descript"];
 		$category_id	=	$_POST["category_id"];
 		$items_cost	=	$_POST["items_cost"];
 		$items_price	=	$_POST["items_price"];
@@ -53,13 +54,14 @@ if(isset($_POST['btn_action']))
 		$product_img2	=	basename($_FILES["product_img2"]["name"]);
 
 		$query = "
-		INSERT INTO items (items_name, category_id, items_cost, items_price, items_stocks, items_low, supplier_id, measurement_id, product_img1, product_img2, items_status) 
-		VALUES (:items_name, :category_id, :items_cost, :items_price, :items_stocks, :items_low, :supplier_id, :measurement_id, :product_img1, :product_img2, 'active')
+		INSERT INTO items (items_name, item_descript, category_id, items_cost, items_price, items_stocks, items_low, supplier_id, measurement_id, product_img1, product_img2, items_status) 
+		VALUES (:items_name, :item_descript, :category_id, :items_cost, :items_price, :items_stocks, :items_low, :supplier_id, :measurement_id, :product_img1, :product_img2, 'active')
 		";
 		$statement = $connect->prepare($query);
 		$statement->execute(
 			array(
 				':items_name'	=>	$_POST["items_name"],
+				':item_descript'	=>	$_POST["item_descript"],
 				':category_id'	=>	$_POST["category_id"],
 				':items_cost'	=>	$_POST["items_cost"],
 				':items_price'	=>	$_POST["items_price"],
@@ -92,6 +94,7 @@ if(isset($_POST['btn_action']))
 		foreach($result as $row)
 		{
 			$output['items_name'] = $row['items_name'];
+			$output['item_descript'] = $row['item_descript'];
 			$output['category_id'] = $row['category_id'];
 			$output['items_cost'] = $row['items_cost'];
 			$output['items_price'] = $row['items_price'];
@@ -140,6 +143,7 @@ if(isset($_POST['btn_action']))
 		
 		$query = "
 		UPDATE items set items_name = :items_name,
+		item_descript = :item_descript,
 		category_id = :category_id,
 		items_cost = :items_cost,
 		items_price = :items_price,
@@ -161,6 +165,7 @@ if(isset($_POST['btn_action']))
 				':items_price'	=>	$_POST["items_price"],
 				':items_cost'	=>	$_POST["items_cost"],
 				':category_id'	=>	$_POST["category_id"],
+				':item_descript' =>	$_POST["item_descript"],
 				':items_name'	=>	$_POST["items_name"],
 				':items_id'		=>	$_POST["items_id"],
 				':product_img1'	=>	basename($_FILES["product_img1"]["name"]),
@@ -208,44 +213,44 @@ if(isset($_POST['btn_action']))
 		 {  
 			$output .= '  
 			<tr>  
-				 <td width="30%"><label>Item ID</label></td>  
-				 <td width="70%">'.$row["items_id"].'</td>  
+				 <td width="30%"><label><b>Item Name</b></label></td>  
+				 <td width="70%">'.$row["items_name"].'</td>  
 			</tr>
 			<tr>  
-				 <td width="30%"><label>Item name</label></td>  
-				 <td width="70%">'.$row["items_name"].'</td>  
+				 <td width="30%"><label><b>Item Description</b></label></td>  
+				 <td width="70%">'.$row["item_descript"].'</td>  
 			</tr> 
 			<tr>  
-				 <td width="30%"><label>Category</label></td>  
+				 <td width="30%"><label><b>Category</b></label></td>  
 				 <td width="70%">'.$row["category_name"].'</td>  
 			</tr>  
 			<tr>  
-				 <td width="30%"><label>Supplier</label></td>  
+				 <td width="30%"><label><b>Supplier</b></label></td>  
 				 <td width="70%">'.$row["supplier_name"].'</td>  
 			</tr>  
 			<tr>  
-				 <td width="30%"><label>Measurement</label></td>  
+				 <td width="30%"><label><b>Measurement</b></label></td>  
 				 <td width="70%">'.$row["measurement_name"].'</td>  
 			</tr>  
 			<tr>  
-				 <td width="30%"><label>Stocks</label></td>  
+				 <td width="30%"><label><b>Stocks</b></label></td>  
 				 <td width="70%">'.$row["items_stocks"].'</td>  
 			</tr>  
 			<tr>  
-				 <td width="30%"><label>Low stock</label></td>  
+				 <td width="30%"><label><b>Low Stock</b></label></td>  
 				 <td width="70%">'.$row["items_low"].'</td>  
 			</tr>   
 			<tr>  
-			<td width="30%"><label>Cost</label></td>  
+			<td width="30%"><label><b>Cost</b></label></td>  
 			<td width="70%">₱'.$row["items_cost"].'</td>  
 			 </tr>  
 			
 			<tr>  
-				 <td width="30%"><label>Selling price</label></td>  
+				 <td width="30%"><label><b>Selling Price</b></label></td>  
 				 <td width="70%">₱'.$row["items_price"].'</td>  
 			</tr> 
 			<tr>  
-				 <td width="30%"><label>Pictures</label></td>  
+				 <td width="30%"><label><b>Pictures</b></label></td>  
 				 <td width="70%"><img src="../admin/product_images/'.$row["product_img1"].'" width="100" id="img2_db" /> <img src="../admin/product_images/'.$row["product_img2"].'" width="100" id="img2_db" /> </td>
 				  
 			</tr>  
