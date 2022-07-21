@@ -73,6 +73,10 @@ include('../function.php');
 							<input type="text" name="items_name" id="items_name" class="form-control" required />
 							</div>
 							<div class="form-group">
+							<label><b>Item Description:</b></label>
+							<textarea type="text" style="resize:none;" name="item_descript" id="item_descript" class="form-control" required></textarea>
+							</div>
+							<div class="form-group">
                                 <label><b>Category:</b></label>
                                 <select style="cursor:pointer" name="category_id" id="category_id" class="form-control" required>
                                     <option value="">--- Select Category ---</option>
@@ -279,6 +283,7 @@ $(document).ready(function(){
 			{
 				
 				$('#items_name').val(data.items_name);
+				$('#item_descript').val(data.item_descript);
 				$('#category_id').val(data.category_id);
 				$('#items_stocks').val(data.items_stocks);
 				$('#supplier_id').val(data.supplier_id);

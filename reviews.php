@@ -68,7 +68,7 @@
     		<div class="card-body ">
     			<div class="row">
     				<div class="col-sm-4 text-center">
-    					<h1 class="text-warning mt-4 mb-4">
+    					<h1 class="text-warning mt-3 mb-4">
     						<b><span id="average_rating">0.0</span> / 5</b>
     					</h1>
     					<div class="mb-3">
@@ -80,7 +80,7 @@
 	    				</div>
     					<h3><span id="total_review">0</span> Reviews</h3>
     				</div>
-    				<div class="col-sm-4">
+    				<div class="col-sm-7">
     					<p>
                             <div class="progress-label-left"><b>5</b> <i class="fas fa-star text-warning"></i></div>
 
@@ -122,12 +122,11 @@
                             </div>               
                         </p>
     				</div>
-    				<div class="col-sm-4 text-center">
+    				<!--<div class="col-sm-4 text-center">
     					<button type="button" name="add_review" id="add_review" class="btn btn-primary mt-4">Write a Review</button>
-                        
-    				</div>
-                    <div class="mt-3 text-center">
-                        <select class="bg-white bulk-actions">
+    				</div>-->
+                    <div class="mt-3 text-end">
+                        <select class="bg-white bulk-actions" style="cursor: pointer;">
                           <option>Most Recent</option>
                           <option value="1">Highest Rating</option>
                           <option value="2">Lowest Rating</option>

@@ -137,6 +137,7 @@ if(isset($_POST["getProduct"])){
 	foreach($result as $row)
 	{
 		$items_id    = $row['items_id'];
+		$item_descript = $row['item_descript'];
 			$items_name = $row['items_name'];
 			$items_price = $row['items_price'];
 			$product_img1 = $row['product_img1'];
@@ -152,7 +153,7 @@ if(isset($_POST["getProduct"])){
 						<div class='row'>
   							<div class='col-12 h5 text-primary item-name'><strong>$items_name</strong></div>
 							  <p class='item-description'>
-							  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem temporibus veniam.Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem temporibus veniam.
+							 $item_descript
 							</p>
 							<div class='col-12 h6 pt-1'><strong>".CURRENCY." $items_price.00 <span class='text-success'>&nbsp;In Stock<span></strong></div>
 						</div>

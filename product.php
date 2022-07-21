@@ -74,7 +74,14 @@ require "database_connection.php";
               <button class="mybtn" data-toggle="tooltip" data-placement="bottom" title="List View" onclick="Button(0); List();"><i class="fas fa-th-list fa-lg" style="cursor: pointer;"></i></button>
               <button class="mybtn Active" data-toggle="tooltip" data-placement="bottom" title="Grid View" onclick="Button(1); Grid();"><i class="fas fa-th fa-lg" style="cursor: pointer;"></i></button>
         </div>
-              <center><div><i> 49 Products</i></div>
+        <?php
+          function rowCount($connect, $query){
+            $statement = $connect->prepare($query);
+            $statement->execute();
+            return $statement->rowCount();
+          }
+        ?>
+              <center><div><i> <?php echo rowCount($connect,"SELECT items_id FROM items ORDER BY items_id");?> Products</i></div>
               <div class="shadow border">
                         <select style="cursor: pointer">
                           <option value="1">Best Selling</option>

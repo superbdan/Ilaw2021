@@ -1,4 +1,6 @@
 <?php
+include('database_connection.php');
+
 $active = "Dashboard";
 include('header.php');
 include('sidebar.php');
@@ -110,7 +112,16 @@ include('sidebar.php');
                                         <i class="fa fa-suitcase text-theme"></i>
                                     </div>
                                     <div class="media-body pl-2">
-                                        <h3 class="mt-0 mb-0 text-white"><strong>1022</strong></h3>
+
+                            <?php
+                                function rowCount($connect, $query){
+                                    $statement = $connect->prepare($query);
+                                    $statement->execute();
+                                    return $statement->rowCount();
+
+                                }
+                            ?>
+                                        <h3 class="mt-0 mb-0 text-white"><strong><?php echo rowCount($connect,"SELECT items_id FROM items ORDER BY items_id");?></strong></h3>
                                         <p><small class="bc-description text-white">Total Products</small></p>
                                     </div>
                                 </div>
